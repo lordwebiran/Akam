@@ -1,0 +1,13 @@
+{
+    "name": "amir/vc-akam",
+    "authors": [
+        {
+            "name": "viennacompany",
+            "email": "info@viennad1.ir"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": ["inc/"]
+    }
+}
