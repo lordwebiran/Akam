@@ -67,6 +67,7 @@ class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
         'CSF_Welcome' => __DIR__ . '/../..' . '/inc/admin/codestar/views/welcome.php',
         'CSF_Widget' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/widget-options.class.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'VCA_Assets' => __DIR__ . '/../..' . '/inc/VCA-Assets.php',
         'VCA_DB' => __DIR__ . '/../..' . '/inc/VCA-DB.php',
         'VCA_DBDL' => __DIR__ . '/../..' . '/inc/VCA-DBDL.php',
         'WP_Customize_Control_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',

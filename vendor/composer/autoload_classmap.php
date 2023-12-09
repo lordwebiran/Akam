@@ -66,6 +66,7 @@ return array(
     'CSF_Welcome' => $baseDir . '/inc/admin/codestar/views/welcome.php',
     'CSF_Widget' => $baseDir . '/inc/admin/codestar/classes/widget-options.class.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'VCA_Assets' => $baseDir . '/inc/VCA-Assets.php',
     'VCA_DB' => $baseDir . '/inc/VCA-DB.php',
     'VCA_DBDL' => $baseDir . '/inc/VCA-DBDL.php',
     'WP_Customize_Control_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
