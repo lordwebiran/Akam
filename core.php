@@ -1,91 +1,85 @@
 <?php
+
 /*
-Plugin Name: افزونه چت و تماس با ما آکام
-Description: این افزونه به شما این امکان را می‌دهد تا ارتباطی آسان تر با کاربران خود داشته باشید
+Plugin Name: ارتباط با ما
+Plugin URI: https://www.rtl-theme.com/author/viennacompany/products/
+Description: افزونه حر فه ای ارتباط با ما
+Author: شرکت پرتو گستر ویانا
 Version: 1.0.0
-Author: پرتو گستر ویانا
-Author URI: https://viennaco.ir/
-Plugin URI: https://github.com/lordwebiran/Gold-Price
+Author URI: https://www.rtl-theme.com/author/viennacompany/
 */
 
-if (!defined('ABSPATH')) {
-    exit;
-}
+defined("ABSPATH" || exit());
 
-class Core
+require 'inc/VCA-Assets.php';
+require 'inc/VCA-DB.php';
+require 'inc/VCA-DBDL.php';
+
+class VC_akam_Core
 {
-    private static $_instance = null;
-
+    private static $__instance = null;
     const MINIMUM_PHP_VERSION = "7.4";
-    const Plugin_Name = "آکام";
+    const Plugin_Name = "ثبت سفارش گلد";
 
     public static function instance()
     {
-        if (is_null(self::$_instance)) {
-            self::$_instance = new self();
+        if (is_null(self::$__instance)) {
+            self::$__instance = new self();
         }
-        return self::$_instance;
     }
-
     public function __construct()
     {
         if (version_compare(PHP_VERSION, self::MINIMUM_PHP_VERSION, '<')) {
             add_action('admin_notices', [$this, 'admin_notice']);
             return;
         }
-        $this->constans();
+        $this->constants();
         $this->init();
     }
 
-    public function constans()
+    public function constants()
     {
-        define('G_BASE_FILE', __FILE__);
-        define('G_PLUGIN_DIR', plugin_dir_path(__FILE__));
-        define('G_PLUGIN_URL', plugin_dir_url(__FILE__));
-        define('G_ASSETS_URL', G_PLUGIN_URL . 'assets/');
-        define('G_includes_DIR', G_PLUGIN_DIR . 'includes/');
-        define('G_admin_DIR', G_includes_DIR . 'admin/');
-        define('G_admin_views_DIR', G_admin_DIR . 'views/');
-        define('G_ferant_DIR', G_includes_DIR . 'ferant/');
+        if (!function_exists('get_plugin_data')) {
+            require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        }
+        define("VCA_BASE_FILE", __FILE__);
+        define("VCA_PATH", trailingslashit(plugin_dir_path(VCA_BASE_FILE)));
+        define("VCA_URL", trailingslashit(plugin_dir_url(VCA_BASE_FILE)));
+        define("VCA_ADMIN_ASSETS", trailingslashit(VCA_URL . 'assets/admin'));
+        define("VCA_FRONT_ASSETS", trailingslashit(VCA_URL . 'assets/front'));
+        define("VCA_INC", trailingslashit(VCA_PATH . 'inc'));
+        define("VCA_VIEWS", trailingslashit(VCA_PATH . 'views'));
+        define("VCA_IMG_FRONT", trailingslashit(VCA_FRONT_ASSETS . 'img'));
+
+        $tkt_plugin_data = get_plugin_data(VCA_BASE_FILE);
+        define('VCA_VER', $tkt_plugin_data['Version']);
     }
+
     public function init()
     {
-        require_once G_PLUGIN_DIR . 'vendor/autoload.php';
-        require_once G_PLUGIN_DIR . 'inc/admin/codestar/codestar-framework.php';
-
-        register_activation_hook(G_BASE_FILE, [$this, 'active']);
-        register_deactivation_hook(G_BASE_FILE, [$this, 'deactive']);
-
-        //if (is_admin()) {
-        //    new VC_Menu();
-        //}
-
-        //new G_Assets();
-
-        //function sale()
-        //{
-        //    $manager = new VC_sale_m();
-        //    $manager->page();
-        //}
-        //add_shortcode('sale', 'sale');
+        require_once VCA_PATH . 'vendor/autoload.php';
+        register_activation_hook(VCA_BASE_FILE, [$this, 'active']);
+        register_deactivation_hook(VCA_BASE_FILE, [$this, 'deative']);
+        require_once VCA_INC . 'admin/codestar/codestar-framework.php';
+        if (is_admin()) {
+        }
     }
+
     public function active()
     {
-        //VC_DB::create_table();
+        VCA_DB::create_table();
     }
 
-    public function deactive()
+    public function deative()
     {
+        VCA_DBDL::create_table();
     }
 
     public function admin_notice()
-    {
-?>
+    { ?>
         <div class="notice notice-warning is-dismissible">
             <p><?php echo esc_html('افزونه <b>' . self::Plugin_Name . '</b> برای اجرای صحیح نیاز به نسخه <b>' . self::MINIMUM_PHP_VERSION . ' PHP</b> به بالا دارد، لطفا نسخه PHP خود را ارتقا دهید'); ?></p>
         </div>
-<?php
-    }
+<?php }
 }
-
-Core::instance();
+VC_akam_Core::instance();

@@ -1,0 +1,268 @@
+@font-face {
+    font-family: "Vazir";
+    src: url("../../../assets/font/Vazir/Vazir-FD-WOL.eot");
+    /* IE9 Compat Modes */
+    src: url("../../../assets/font/Vazir/Vazir-FD-WOL.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../../../assets/font/Vazir/Vazir-FD-WOL.woff2") format("woff2"),
+        /* Super Modern Browsers */
+        url("../../../assets/font/Vazir/Vazir-FD-WOL.woff") format("woff"),
+        /* Pretty Modern Browsers */
+        url("../../../assets/font/Vazir/Vazir-FD-WOL.ttf") format("truetype");
+    /* Safari, Android, iOS */
+}
+
+.VCA-Vazir {
+    font-family: "Vazir" !important;
+}
+
+[class^="ip-brands-"] {
+    font-size: 18px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.VCA-Floatbutton {
+    position: fixed;
+    display: inline-table;
+    bottom: 20px;
+    right: 20px;
+}
+
+.VCA-floating {
+    display: block;
+    position: relative;
+    top: 0px;
+}
+
+.VCA-titel {
+    display: block;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    background-color: brown;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.VCA-titel p {
+    padding-top: 12px;
+}
+
+.VCA-body {
+    background-color: #fff;
+    border-left: brown solid 1px;
+    border-right: brown solid 1px;
+}
+
+.VCA-body a {
+    text-decoration: none;
+    color: #000;
+}
+
+.VCA-item {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: brown solid 1px;
+}
+
+.VCA-item img {
+    width: 25px;
+    float: left;
+    margin-top: -4px;
+    margin-left: 10px;
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.VCA-item p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.VCA-footer {
+    margin-bottom: 10px;
+    background-color: brown;
+    width: 300px;
+    height: 10px;
+    text-align: center;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.VCA-Button {
+    width: 60px;
+    height: 60px;
+    background-color: antiquewhite;
+    border-radius: 100%;
+    text-align: center;
+    color: #000;
+    border: #000 dotted 1px;
+}
+
+.VCA-Button img {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    top: 5px;
+    bottom: auto;
+}
+
+.VCA-Button img.h_btn_item {
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    top: 12px;
+    bottom: auto;
+}
+
+.VCA-Button p {
+    display: block;
+    position: relative;
+    margin: 0;
+    margin-top: 6px;
+    top: auto;
+    bottom: auto;
+    font-size: 11px;
+}
+
+.displaynone {
+    display: none;
+}
+
+/* استایل‌های مخصوص گوشی‌ها با عرض 992px به بالا */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .VCA-Button img {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: relative;
+        top: 10px;
+        bottom: auto;
+    }
+
+    .VCA-Button p {
+        display: block;
+        position: relative;
+        font-size: 11px;
+    }
+
+    .h_btn_item {
+        transform: rotate(30deg);
+    }
+}
+
+.VCA-Callrequest {
+    width: 100%;
+    background-color: chocolate;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.VCA-Callrequest .VCA-texth h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.VCA-Callrequest .VCA-texth p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.VCA-Callrequest form.Callrequest {
+    display: inline-flexbox;
+}
+
+.VCA-Callrequest form.Callrequest input {
+    width: 49%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: #fff solid 1px;
+    font-size: 14px;
+}
+
+.VCA-Callrequest form.Callrequest button {
+    float: left;
+    width: 10%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: #fff solid 1px;
+    font-size: 14px;
+}
+
+.VCA-Callrequest .libel-alert {
+    text-align: center;
+    font-size: 20px;
+    display: none;
+    color: darkgreen;
+}
+
+/* استایل‌های مخصوص گوشی‌ها با عرض 992px به بالا */
+@media only screen and (min-width: 300px) {
+    .VCA-Callrequest form.Callrequest button {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .VCA-Callrequest form.Callrequest button {
+        width: 30%;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .VCA-Callrequest form.Callrequest button {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .VCA-Callrequest form.Callrequest button {
+        width: 20%;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .VCA-Callrequest form.Callrequest button {
+        width: 10%;
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .VCA-Callrequest form.Callrequest button {
+        width: 10%;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 991px) {
+    .VCA-Callrequest form.Callrequest input {
+        width: 95%;
+    }
+}

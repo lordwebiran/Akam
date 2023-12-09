@@ -4,11 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc5d2c736501d9de9aa457bfcf9d72f0b
+class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
 {
     public static $classMap = array (
         'CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/setup.class.php',
         'CSF_Abstract' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/abstract.class.php',
+        'CSF_Comment_Metabox' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/comment-options.class.php',
+        'CSF_Customize_Options' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/customize-options.class.php',
         'CSF_Field_accordion' => __DIR__ . '/../..' . '/inc/admin/codestar/fields/accordion/accordion.php',
         'CSF_Field_background' => __DIR__ . '/../..' . '/inc/admin/codestar/fields/background/background.php',
         'CSF_Field_backup' => __DIR__ . '/../..' . '/inc/admin/codestar/fields/backup/backup.php',
@@ -54,11 +56,18 @@ class ComposerStaticInitc5d2c736501d9de9aa457bfcf9d72f0b
         'CSF_Field_upload' => __DIR__ . '/../..' . '/inc/admin/codestar/fields/upload/upload.php',
         'CSF_Field_wp_editor' => __DIR__ . '/../..' . '/inc/admin/codestar/fields/wp_editor/wp_editor.php',
         'CSF_Fields' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/fields.class.php',
+        'CSF_Metabox' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/metabox-options.class.php',
+        'CSF_Nav_Menu_Options' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/nav-menu-options.class.php',
         'CSF_Options' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/admin-options.class.php',
+        'CSF_Profile_Options' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/profile-options.class.php',
         'CSF_Setup' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/setup.class.php',
+        'CSF_Shortcoder' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/shortcode-options.class.php',
+        'CSF_Taxonomy_Options' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/taxonomy-options.class.php',
         'CSF_Walker_Nav_Menu_Edit' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/walker.php',
         'CSF_Welcome' => __DIR__ . '/../..' . '/inc/admin/codestar/views/welcome.php',
+        'CSF_Widget' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/widget-options.class.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'VCA_DB' => __DIR__ . '/../..' . '/inc/VCA-DB.php',
         'WP_Customize_Control_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Panel_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Section_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
@@ -67,7 +76,7 @@ class ComposerStaticInitc5d2c736501d9de9aa457bfcf9d72f0b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitc5d2c736501d9de9aa457bfcf9d72f0b::$classMap;
+            $loader->classMap = ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32::$classMap;
 
         }, null, ClassLoader::class);
     }

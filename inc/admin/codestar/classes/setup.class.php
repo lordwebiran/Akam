@@ -11,8 +11,8 @@ if ( ! class_exists( 'CSF_Setup' ) ) {
   class CSF_Setup {
 
     // Default constants
-    public static $premium  = false;
-    public static $version  = '2.3.0';
+    public static $premium  = true;
+    public static $version  = '2.2.9';
     public static $dir      = '';
     public static $url      = '';
     public static $css      = '';
@@ -39,7 +39,7 @@ if ( ! class_exists( 'CSF_Setup' ) ) {
 
     private static $instance = null;
 
-    public static function init( $file = __FILE__, $premium = false ) {
+    public static function init( $file = __FILE__, $premium = true ) {
 
       // Set file constant
       self::$file = $file;
@@ -792,7 +792,7 @@ if ( ! class_exists( 'CSF_Setup' ) ) {
 
 }
 
-CSF_Setup::init( __FILE__, false );
+CSF_Setup::init( __FILE__, true );
 
 /**
  *
