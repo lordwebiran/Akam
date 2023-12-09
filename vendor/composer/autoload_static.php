@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
 {
     public static $classMap = array (
+        'Base_Menu' => __DIR__ . '/../..' . '/inc/admin/astract/base-menu.php',
         'CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/setup.class.php',
         'CSF_Abstract' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/abstract.class.php',
         'CSF_Comment_Metabox' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/comment-options.class.php',
@@ -70,6 +71,9 @@ class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
         'VCA_Assets' => __DIR__ . '/../..' . '/inc/VCA-Assets.php',
         'VCA_DB' => __DIR__ . '/../..' . '/inc/VCA-DB.php',
         'VCA_DBDL' => __DIR__ . '/../..' . '/inc/VCA-DBDL.php',
+        'VCA_Flash_Message' => __DIR__ . '/../..' . '/inc/admin/VCA-flash-message.php',
+        'VCA_Menu' => __DIR__ . '/../..' . '/inc/admin/VC_menu.php',
+        'VC_Order_Manager_admin' => __DIR__ . '/../..' . '/inc/frant/views/Callrequest.php',
         'WP_Customize_Control_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Panel_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Section_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',

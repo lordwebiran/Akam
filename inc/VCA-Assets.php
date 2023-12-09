@@ -16,7 +16,6 @@ class VCA_Assets
         //style
         wp_enqueue_style('VCA-style', VCA_ASSETS . 'css/VCA-style.css');
 
-
         //script
         wp_enqueue_script('jquery');
         wp_enqueue_script('VCA-script', VCA_ASSETS . 'js/VCA-script.js', array('jquery'), null, true);
@@ -30,7 +29,6 @@ class VCA_Assets
     {
         //style
         wp_enqueue_style('VCA-admin', VCA_ASSETS . 'css/VCA-admin.css');
-
 
         //script
         wp_enqueue_script('jquery');

@@ -30,9 +30,9 @@ class VCA_DB
             `ID` bigint(20) NOT NULL AUTO_INCREMENT,
             `NF` varchar(128) NOT NULL,
             `phone` INT DEFAULT NULL,
-            `status` INT DEFAULT NULL,
+            `ID_status` INT DEFAULT NULL,
             PRIMARY KEY (`ID`),
-            KEY `status` (`status`))
+            KEY `ID_status` (`ID_status`))
             ENGINE=InnoDB " . $charset_collate . ";";
 
         // تعریف جدول دکمه شناور

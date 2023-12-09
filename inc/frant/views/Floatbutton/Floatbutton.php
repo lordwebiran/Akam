@@ -28,10 +28,6 @@
   <div class="VCA-Button" id="VCA-Button">
     <img class="btn_item" src="../../../assets/img/skype-512.png" />
     <p class="VCA-Vazir btn_item">ارتباط با ما</p>
-    <img
-      class="h_btn_item"
-      style="display: none"
-      src="../../../assets/img/plus large-512.png"
-    />
+    <img class="h_btn_item" style="display: none" src="<?php echo esc_url(VCA_IMG_FRONT) ?>plus large-512.png" />
   </div>
 </section>

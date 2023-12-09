@@ -19,7 +19,7 @@ class VC_akam_Core
 {
     private static $__instance = null;
     const MINIMUM_PHP_VERSION = "7.4";
-    const Plugin_Name = "ثبت سفارش گلد";
+    const Plugin_Name = "ارتباط با ما";
 
     public static function instance()
     {
@@ -49,8 +49,8 @@ class VC_akam_Core
         define("VCA_INC", trailingslashit(VCA_PATH . 'inc'));
         define("VCA_IMG_FRONT", trailingslashit(VCA_ASSETS . 'img'));
 
-        $tkt_plugin_data = get_plugin_data(VCA_BASE_FILE);
-        define('VCA_VER', $tkt_plugin_data['Version']);
+        $VCA_plugin_data = get_plugin_data(VCA_BASE_FILE);
+        define('VCA_VER', $VCA_plugin_data['Version']);
     }
 
     public function init()
@@ -59,7 +59,9 @@ class VC_akam_Core
         register_activation_hook(VCA_BASE_FILE, [$this, 'active']);
         register_deactivation_hook(VCA_BASE_FILE, [$this, 'deative']);
         require_once VCA_INC . 'admin/codestar/codestar-framework.php';
+        require_once VCA_INC.'admin/VCA-settings.php';
         if (is_admin()) {
+            new VCA_Menu();
         }
         new VCA_Assets();
     }

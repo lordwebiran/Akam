@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Vazir";
+    src: url("../../../assets/font/Vazir/Vazir-FD-WOL.eot");
+    /* IE9 Compat Modes */
+    src: url("../../../assets/font/Vazir/Vazir-FD-WOL.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../../../assets/font/Vazir/Vazir-FD-WOL.woff2") format("woff2"),
+        /* Super Modern Browsers */
+        url("../../../assets/font/Vazir/Vazir-FD-WOL.woff") format("woff"),
+        /* Pretty Modern Browsers */
+        url("../../../assets/font/Vazir/Vazir-FD-WOL.ttf") format("truetype");
+    /* Safari, Android, iOS */
+}
+
+/* تعریف متغیرهای رنگ */
+:root {
+    --primary-text-color: #000;
+    --secondary-text-color: #fff;
+    --background-color-light: #CDB4DB;
+    --background-color-dark: #2EC4B6;
+    --warning-color: #E71D36;
+    --button-color: #FF9F1C;
+    --link-text-color: #5a5a5a;
+    --link-border-color: #FFAFCC;
+    --link-background-color: #FFC8DD;
+}
+
+.VCA-Vazir {
+    font-family: "Vazir" !important;
+}
+
+[data-slug="VCA-settings"],
+[data-slug="VCA-settings"] h1 ,.csf-title h4 ,[data-slug="VCA-settings"] h2,[data-slug="VCA-settings"] h3,[data-slug="VCA-settings"] h4,[data-slug="VCA-settings"] h5,[data-slug="VCA-settings"] h6,[data-slug="VCA-settings"] p{
+    font-family: "Vazir" !important;
+}
+
+
+/* انتخاب عنصر با اتریبیوت */
+[data-slug="VCA-settings"] h1 {
+    color: var(--primary-text-color) !important;
+    font-size: 18px;
+}
+
+/* انتخاب هم‌مرز */
+[data-slug="VCA-settings"] h1 span {
+    color: var(--secondary-text-color) !important;
+    font-size: 10px;
+}
+
+/* انتخاب عنصر بعدی همسطح با کلاس خاص */
+[data-slug="VCA-settings"] .csf-nav-normal+.csf-content {
+    margin-left: 0 !important;
+    margin-right: 225px !important;
+}
+
+/* انتخاب عنصر با کلاس خاص در داخل کلاس خاص */
+.csf-theme-dark .csf-header-inner {
+    background-color: var(--background-color-light) !important;
+}
+
+/* انتخاب عناصر دکمه در داخل عنصرهای وردپرس */
+.csf-buttons .button.button-secondary.csf-reset-section.csf-confirm {
+    color: var(--primary-text-color) !important;
+    border-color: var(--secondary-text-color) !important;
+    background: var(--button-color) !important;
+    vertical-align: top;
+}
+
+/* انتخاب عنصر با کلاس خاص */
+.csf-buttons .button.csf-warning-primary.csf-reset-all.csf-confirm {
+    color: var(--secondary-text-color) !important;
+    border-color: var(--secondary-text-color) !important;
+    background: var(--warning-color) !important;
+}
+
+/* انتخاب دکمه اصلی وردپرس */
+.csf-buttons .button.button-primary.csf-top-save.csf-save.csf-save-ajax ,.csf-buttons .button.button-primary.csf-save.csf-save-ajax {
+    background: var(--background-color-dark) !important;
+    border-color: var(--secondary-text-color) !important;
+    color: var(--secondary-text-color) !important;
+}
+
+/* انتخاب عناصر لینک در داخل کلاس خاص با استفاده از رنگ و پس‌زمینه */
+.csf-theme-dark .csf-nav ul li a {
+    color: var(--link-text-color) !important;
+    border-color: var(--link-border-color) !important;
+    background-color: var(--link-background-color) !important;
+}
+
+/* انتخاب عنصر فعال در داخل کلاس خاص */
+.csf-theme-dark .csf-nav ul li .csf-active {
+    color: var(--primary-text-color) !important;
+    background-color: var(--link-border-color) !important;
+}
+
+/* انتخاب عنصر با کلاس خاص برای زمینه ناوبری تیره */
+.csf-theme-dark .csf-nav-background {
+    background-color: var(--link-background-color) !important;
+}
+
+/* انتخاب ورودی متن در داخل کلاس خاص با رنگ متفاوت */
+.csf-theme-dark .csf-search input {
+    color: var(--primary-text-color);
+    background-color: var(--link-background-color) !important;
+}
+
+/* انتخاب پا با رنگ متفاوت */
+.csf-theme-dark .csf-footer {
+    color: #555 !important;
+    background-color: var(--background-color-light) !important;
+}
+
+/* انتخاب دکمه با رنگ متفاوت */
+.csf-theme-dark .csf-expand-all {
+    color: var(--primary-text-color);
+    background-color: var(--link-background-color) !important;
+}

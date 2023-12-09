@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Base_Menu' => $baseDir . '/inc/admin/astract/base-menu.php',
     'CSF' => $baseDir . '/inc/admin/codestar/classes/setup.class.php',
     'CSF_Abstract' => $baseDir . '/inc/admin/codestar/classes/abstract.class.php',
     'CSF_Comment_Metabox' => $baseDir . '/inc/admin/codestar/classes/comment-options.class.php',
@@ -69,6 +70,9 @@ return array(
     'VCA_Assets' => $baseDir . '/inc/VCA-Assets.php',
     'VCA_DB' => $baseDir . '/inc/VCA-DB.php',
     'VCA_DBDL' => $baseDir . '/inc/VCA-DBDL.php',
+    'VCA_Flash_Message' => $baseDir . '/inc/admin/VCA-flash-message.php',
+    'VCA_Menu' => $baseDir . '/inc/admin/VC_menu.php',
+    'VC_Order_Manager_admin' => $baseDir . '/inc/frant/views/Callrequest.php',
     'WP_Customize_Control_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
     'WP_Customize_Panel_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
     'WP_Customize_Section_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
