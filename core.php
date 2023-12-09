@@ -47,7 +47,6 @@ class VC_akam_Core
         define("VCA_URL", trailingslashit(plugin_dir_url(VCA_BASE_FILE)));
         define("VCA_ASSETS", trailingslashit(VCA_URL . 'assets'));
         define("VCA_INC", trailingslashit(VCA_PATH . 'inc'));
-        define("VCA_VIEWS", trailingslashit(VCA_PATH . 'views'));
         define("VCA_IMG_FRONT", trailingslashit(VCA_ASSETS . 'img'));
 
         $tkt_plugin_data = get_plugin_data(VCA_BASE_FILE);
@@ -62,6 +61,7 @@ class VC_akam_Core
         require_once VCA_INC . 'admin/codestar/codestar-framework.php';
         if (is_admin()) {
         }
+        new VCA_Assets();
     }
 
     public function active()
