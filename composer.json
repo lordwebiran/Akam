@@ -9,5 +9,5 @@
     "require": {},
     "autoload": {
         "classmap": ["inc/"]
-    } 
+    }
 }
