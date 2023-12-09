@@ -45,11 +45,10 @@ class VC_akam_Core
         define("VCA_BASE_FILE", __FILE__);
         define("VCA_PATH", trailingslashit(plugin_dir_path(VCA_BASE_FILE)));
         define("VCA_URL", trailingslashit(plugin_dir_url(VCA_BASE_FILE)));
-        define("VCA_ADMIN_ASSETS", trailingslashit(VCA_URL . 'assets/admin'));
-        define("VCA_FRONT_ASSETS", trailingslashit(VCA_URL . 'assets/front'));
+        define("VCA_ASSETS", trailingslashit(VCA_URL . 'assets'));
         define("VCA_INC", trailingslashit(VCA_PATH . 'inc'));
         define("VCA_VIEWS", trailingslashit(VCA_PATH . 'views'));
-        define("VCA_IMG_FRONT", trailingslashit(VCA_FRONT_ASSETS . 'img'));
+        define("VCA_IMG_FRONT", trailingslashit(VCA_ASSETS . 'img'));
 
         $tkt_plugin_data = get_plugin_data(VCA_BASE_FILE);
         define('VCA_VER', $tkt_plugin_data['Version']);

@@ -54,11 +54,11 @@ class VCA_DB
         $data_to_insert = array(
             array(
                 'name' => 'تماس گرفته شود',
-                'img' => 'phone-arrow-down-left-512.png',
+                'img' => VCA_IMG_FRONT.'phone-arrow-down-left-512.png',
             ),
             array(
                 'name' => 'تماس انجام شد',
-                'img' => 'phone-hangup-512.png',
+                'img' => VCA_IMG_FRONT.'phone-hangup-512.png',
             ),
         );
 
