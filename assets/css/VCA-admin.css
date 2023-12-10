@@ -30,7 +30,14 @@
 }
 
 [data-slug="VCA-settings"],
-[data-slug="VCA-settings"] h1 ,.csf-title h4 ,[data-slug="VCA-settings"] h2,[data-slug="VCA-settings"] h3,[data-slug="VCA-settings"] h4,[data-slug="VCA-settings"] h5,[data-slug="VCA-settings"] h6,[data-slug="VCA-settings"] p{
+[data-slug="VCA-settings"] h1,
+.csf-title h4,
+[data-slug="VCA-settings"] h2,
+[data-slug="VCA-settings"] h3,
+[data-slug="VCA-settings"] h4,
+[data-slug="VCA-settings"] h5,
+[data-slug="VCA-settings"] h6,
+[data-slug="VCA-settings"] p {
     font-family: "Vazir" !important;
 }
 
@@ -59,7 +66,7 @@
 }
 
 /* انتخاب عناصر دکمه در داخل عنصرهای وردپرس */
-.csf-buttons .button.button-secondary.csf-reset-section.csf-confirm {
+[data-slug="VCA-settings"] .csf-buttons .button.button-secondary.csf-reset-section.csf-confirm {
     color: var(--primary-text-color) !important;
     border-color: var(--secondary-text-color) !important;
     background: var(--button-color) !important;
@@ -67,14 +74,15 @@
 }
 
 /* انتخاب عنصر با کلاس خاص */
-.csf-buttons .button.csf-warning-primary.csf-reset-all.csf-confirm {
+[data-slug="VCA-settings"] .csf-buttons .button.csf-warning-primary.csf-reset-all.csf-confirm {
     color: var(--secondary-text-color) !important;
     border-color: var(--secondary-text-color) !important;
     background: var(--warning-color) !important;
 }
 
 /* انتخاب دکمه اصلی وردپرس */
-.csf-buttons .button.button-primary.csf-top-save.csf-save.csf-save-ajax ,.csf-buttons .button.button-primary.csf-save.csf-save-ajax {
+[data-slug="VCA-settings"] .csf-buttons .button.button-primary.csf-top-save.csf-save.csf-save-ajax,
+.csf-buttons .button.button-primary.csf-save.csf-save-ajax {
     background: var(--background-color-dark) !important;
     border-color: var(--secondary-text-color) !important;
     color: var(--secondary-text-color) !important;

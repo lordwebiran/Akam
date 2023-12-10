@@ -20,7 +20,8 @@ class VCA_DB
         $status_sql = "CREATE TABLE IF NOT EXISTS `" . $VCA_status . "` (
             `ID` bigint(20) NOT NULL AUTO_INCREMENT,
             `name` varchar(128) NOT NULL,
-            `img` text NOT NULL,
+            `icon` varchar(128) NOT NULL,
+            `icon_color` varchar(128) NOT NULL,
             PRIMARY KEY (`ID`))
             ENGINE=InnoDB " . $charset_collate . ";";
 
@@ -50,15 +51,16 @@ class VCA_DB
         }
 
         dbDelta($status_sql);
-        // اطلاعات برای افزودن
         $data_to_insert = array(
             array(
                 'name' => 'تماس گرفته شود',
-                'img' => VCA_IMG_FRONT.'phone-arrow-down-left-512.png',
+                'icon' =>'ip-ar-message-exclamation',
+                'icon_color' => '#f77f00',
             ),
             array(
                 'name' => 'تماس انجام شد',
-                'img' => VCA_IMG_FRONT.'phone-hangup-512.png',
+                'icon' =>'ip-ar-message-smile',
+                'icon_color' => '#386641',
             ),
         );
 

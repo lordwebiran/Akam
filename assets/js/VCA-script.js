@@ -56,39 +56,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 jQuery(document).ready(function () {
-    jQuery(".Callrequest").submit(function (e) {
+    jQuery("#Callrequest").submit(function (e) {
         e.preventDefault();
 
-        var formData = {
-            Name_and_surname: jQuery("#Name_and_surname").val(),
-            phone: jQuery("#phone").val(),
-        };
+        let $this = jQuery(this);
+        let submit = $this.find('.VCA-submit');
+        submit.prop('disabled', true);
+        submit.html('درحال ارسال');
+
+        formdata = new FormData();
+        formdata.append('action', 'Callrequest');
+        formdata.append('nonce', VC_DATA.nonce);
+        formdata.append('Name_and_surname', jQuery("#Name_and_surname").val());
+        formdata.append('phone', jQuery("#phone").val());
+        formdata.append('status', jQuery("#ID_status").val());
+
 
         jQuery.ajax({
             type: "POST",
-            url: "آدرس_سرور/فایل_پردازشی.php",
-            data: formData,
-            dataType: "json",
-            encode: true,
-        })
-            .done(function (response) {
-                // با موفقیت انجام شد
-                console.log(response);
+            url: VC_DATA.ajax_url,
+            data: formdata,
+            contentType: false,
+            processData: false,
+            success: function (response) {
 
-                // اگر پاسخ مورد نظر شما یک شرط مشخص داشته باشد
-                if (response.success) {
-                    // نمایش الرت مورد نظر
-                    jQuery(".label-alert").text("اطلاعات با موفقیت ثبت شد.").show();
-                } else {
-                    // اگر پاسخ موفقیت‌آمیز نبوده باشد، می‌توانید یک پیام دیگر نمایش دهید
-                    jQuery(".label-alert").text("خطا در ثبت اطلاعات.").show();
-                }
-            })
-            .fail(function (error) {
-                // در هنگام خطا
-                console.error(error);
-                // نمایش پیام خطا
-                jQuery(".label-alert").text("خطا در برقراری ارتباط با سرور.").show();
-            });
+            },
+            error: function (error) {
+            },
+            complete:function () {
+                submit.prop('disabled', false);
+                submit.html('درخواست تماس');
+            },
+        });
     });
 });

@@ -47,7 +47,10 @@ class VC_akam_Core
         define("VCA_URL", trailingslashit(plugin_dir_url(VCA_BASE_FILE)));
         define("VCA_ASSETS", trailingslashit(VCA_URL . 'assets'));
         define("VCA_INC", trailingslashit(VCA_PATH . 'inc'));
+        define("VCA_admin", trailingslashit(VCA_INC . 'admin'));
+        define("VCA_admin_views", trailingslashit(VCA_admin . 'views'));
         define("VCA_IMG_FRONT", trailingslashit(VCA_ASSETS . 'img'));
+        define("VCA_fontawesome", trailingslashit(VCA_ASSETS . 'fontawesome'));
 
         $VCA_plugin_data = get_plugin_data(VCA_BASE_FILE);
         define('VCA_VER', $VCA_plugin_data['Version']);
@@ -63,7 +66,16 @@ class VC_akam_Core
         if (is_admin()) {
             new VCA_Menu();
         }
+        new VCA_admin_ajax();
+        new VCA_ferant_ajax();
         new VCA_Assets();
+
+        function Callrequest()
+        {
+            require_once VCA_INC.'frant/views/Callrequest/Callrequest.php';
+        }
+        add_shortcode('Callrequest', 'Callrequest');
+
     }
 
     public function active()

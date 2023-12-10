@@ -10,9 +10,9 @@ if (class_exists('CSF')) {
   //
   // Create options
   CSF::createOptions($prefix, array(
-    'menu_title' => 'تنظیمات تیکت',
+    'menu_title' => 'تنظیمات',
     'menu_slug'  => 'VCA-settings',
-    'framework_title' => 'تنظیمات ارتباط با ما <span>V' . VCA_VER . ' </span>',
+    'framework_title' => 'تنظیمات ارتباط با ما <span>ورژن ' . VCA_VER . ' </span>',
     'footer_text' => '',
     'menu_hidden' => true,
   ));
@@ -51,13 +51,20 @@ if (class_exists('CSF')) {
         'output_important' => true
       ),
       array(
-        'id'          => 'VCA-Callrequest-text-color',
+        'id'          => 'VCA-Callrequest-text-color-1',
         'type'        => 'color',
-        'title'       => 'رنگ متن های درخواست تماس',
-        'output'      => array(
-          'color' => '.VCA-texth h3',
-          'color' => '.VCA-texth p'
-        ),
+        'title'       => 'رنگ عنوان',
+        'output'      => '.VCA-Callrequest .VCA-texth h3',
+        'output_mode' => 'color',
+        'default' => '#000',
+        'output_important' => true
+      ),
+      array(
+        'id'          => 'VCA-Callrequest-text-color-2',
+        'type'        => 'color',
+        'title'       => 'رنگ زیر عنوان',
+        'output'      => '.VCA-Callrequest .VCA-texth p',
+        'output_mode' => 'color',
         'default' => '#000',
         'output_important' => true
       ),

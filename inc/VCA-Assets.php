@@ -7,8 +7,10 @@ class VCA_Assets
 {
     public function __construct()
     {
+        add_action('wp_enqueue_scripts', [$this, 'fontawesome']);
+        add_action('admin_enqueue_scripts', [$this, 'fontawesome']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts_and_styles']);
-        add_action('admin_enqueue_scripts',[$this,'admin_assets']);
+        add_action('admin_enqueue_scripts', [$this, 'admin_assets']);
     }
 
     function enqueue_scripts_and_styles()
@@ -37,5 +39,29 @@ class VCA_Assets
             'ajax_url' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('VC_ajax_nonce')
         ]);
+    }
+    function fontawesome()
+    {
+        //style
+        wp_enqueue_style('VCA-all', VCA_fontawesome . 'css/all.min.css');
+        wp_enqueue_style('VCA-brands', VCA_fontawesome . 'css/brands.min.css');
+        wp_enqueue_style('VCA-fontawesom', VCA_fontawesome . 'css/fontawesome.min.css');
+        wp_enqueue_style('VCA-regular', VCA_fontawesome . 'css/regular.min.css');
+        wp_enqueue_style('VCA-solid', VCA_fontawesome . 'css/solid.min.css');
+        wp_enqueue_style('VCA-svg-with-j', VCA_fontawesome . 'css/svg-with-js.min.css');
+        wp_enqueue_style('VCA-v4-font-face', VCA_fontawesome . 'css/v4-font-face.min.css');
+        wp_enqueue_style('VCA-v4-shims', VCA_fontawesome . 'css/v4-shims.min.css');
+        wp_enqueue_style('VCA-v5-font-face', VCA_fontawesome . 'css/v5-font-face.min.css');
+        wp_enqueue_style('VCA-ip-awesome-regular', 'https://cdn.iconplanet.app/uicons/awesome-regular/css/ip-awesome-regular.css');
+
+
+        //script
+        wp_enqueue_script('VCA-all', VCA_fontawesome . 'js/all.min.js', null, null, true);
+        wp_enqueue_script('VCA-brands', VCA_fontawesome . 'js/brands.min.js', null, null, true);
+        wp_enqueue_script('VCA-conflict-detection', VCA_fontawesome . 'js/conflict-detection.min.js', null, null, true);
+        wp_enqueue_script('VCA-fontawesome', VCA_fontawesome . 'js/fontawesome.min.js', null, null, true);
+        wp_enqueue_script('VCA-regular', VCA_fontawesome . 'js/regular.min.js', null, null, true);
+        wp_enqueue_script('VCA-solid', VCA_fontawesome . 'js/solid.min.js', null, null, true);
+        wp_enqueue_script('VCA-v4-shims', VCA_fontawesome . 'js/v4-shims.min.js', null, null, true);
     }
 }
