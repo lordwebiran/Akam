@@ -72,6 +72,7 @@ return array(
     'VCA_DBDL' => $baseDir . '/inc/VCA-DBDL.php',
     'VCA_Flash_Message' => $baseDir . '/inc/admin/VCA-flash-message.php',
     'VCA_Menu' => $baseDir . '/inc/admin/VC_menu.php',
+    'VCA_admin_Callrequest_maneger' => $baseDir . '/inc/admin/views/admin-Callrequest-maneger.php',
     'VCA_admin_ajax' => $baseDir . '/inc/admin/VCA-admin-ajax.php',
     'VCA_admin_status_maneger' => $baseDir . '/inc/admin/views/admin-status-maneger.php',
     'VCA_ferant_ajax' => $baseDir . '/inc/frant/VCA-ferant-ajax.php',

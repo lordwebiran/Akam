@@ -42,6 +42,15 @@ if (class_exists('CSF')) {
         'default' => 'درخواست تماس'
       ),
       array(
+        'id'    => 'VCA-status-Default',
+        'type'        => 'select',
+        'title' => 'وضعیت پیشفرض',
+        'chosen'      => true,
+        'placeholder' => 'انتخاب وضعیت پیشفرض',
+        'options' => 'get_status_data',
+        'default'     => '1'
+      ),
+      array(
         'id'          => 'VCA-Callrequest-color',
         'type'        => 'color',
         'title'       => 'رنگ پس زمینه درخواست تماس',
@@ -103,6 +112,21 @@ if (class_exists('CSF')) {
     echo "<h4>المنتور</h4>";
     echo "<p>برای دوستانی هم که خیلی دوست دارند از ابزار های بروز تر استفاده کنند مثل المنتور ویجت این بخش رو براتون آماده کردیم که میتونید ازش استفاده کنید</p>";
   }
+  function get_status_data()
+  {
+    global $wpdb;
+    $status_data = array();
+    $table = $wpdb->prefix . 'VCA_status';
+    $status = $wpdb->get_results("SELECT * FROM " . $table);
+
+    if (count($status)) {
+      foreach ($status as $status_item) {
+        $status_data[$status_item->ID] = $status_item->name;
+      }
+    }
+
+    return $status_data;
+  }
   //
   // Create a section
   CSF::createSection($prefix, array(
@@ -143,22 +167,22 @@ if (class_exists('CSF')) {
       ),
     )
   ));
-  CSF::createSection($prefix, array(
-    'title'  => 'تماس با ما',
-    'fields' => array(
+  //CSF::createSection($prefix, array(
+  //  'title'  => 'تماس با ما',
+  //  'fields' => array(
 
-      array(
-        'type'    => 'callback',
-        'function' => 'contact_us',
-      ),
+  //    array(
+  //      'type'    => 'callback',
+  //      'function' => 'contact_us',
+  //    ),
 
-    )
-  ));
-  function contact_us()
-  {
-    echo "<h3>در دست ساخت</h3>";
-    echo "<p>در بروز رسانی ورژن 1.5.0 در دسترس قرار میگیرد</p>";
-  }
+  //  )
+  //));
+  //function contact_us()
+  //{
+  //  echo "<h3>در دست ساخت</h3>";
+  //  echo "<p>در بروز رسانی ورژن 1.5.0 در دسترس قرار میگیرد</p>";
+  //}
   CSF::createSection($prefix, array(
     'title'  => 'بکاپ',
     'fields' => array(

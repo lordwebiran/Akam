@@ -11,7 +11,7 @@
   <form method="post" class="Callrequest" id="Callrequest">
     <input type="text" name="Name_and_surname" id="Name_and_surname" placeholder="نام و نام خانوادگی" class="VCA-Vazir" required pattern="[آ-ی ]+" />
     <input type="tel" id="phone" name="phone" placeholder="09000000000" pattern="[0-9]{11}" class="VCA-Vazir" required />
-    <input type="hidden" name="ID_status" id="ID_status" value="1">
+    <input type="hidden" name="ID_status" id="ID_status" value="<?php echo esc_html($options['VCA-status-Default']); ?>">
     <button type="submit" class="VCA-Vazir VCA-submit">
       <?php echo esc_html($options['VCA-text-button']); ?>
     </button>

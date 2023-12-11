@@ -33,13 +33,13 @@ class VCA_Menu extends Base_Menu{
                 'callback'  =>'VCA_Floatbutton',
                 'position'  => 3,
             ],
-            'contact_us'=>[
-                'page_title'=>'تماس با ما',
-                'menu_title'=>'تماس با ما',
-                'menu_slug' =>'VCA-contact-us',
-                'callback'  =>'VCA_contact_us',
-                'position'  => 4,
-            ],
+            //'contact_us'=>[
+            //    'page_title'=>'تماس با ما',
+            //    'menu_title'=>'تماس با ما',
+            //    'menu_slug' =>'VCA-contact-us',
+            //    'callback'  =>'VCA_contact_us',
+            //    'position'  => 4,
+            //],
             'settings'=>[
                 'page_title'=>'تنظیمات',
                 'menu_title'=>'تنظیمات',
@@ -55,7 +55,8 @@ class VCA_Menu extends Base_Menu{
         echo '<h2>به زودی</h2><p>در ورژن دو ایجاد می شود در صورت درخواست کارفرما</p>';
     }
     public function VCA_Callrequest(){
-        echo '<h2>به زودی</h2><p>در ورژن دو ایجاد می شود در صورت درخواست کارفرما</p>';
+        $status= new VCA_admin_Callrequest_maneger();
+        $status->page();
     }
     public function VCA_status(){
         $status= new VCA_admin_status_maneger();

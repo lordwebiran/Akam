@@ -73,6 +73,7 @@ class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
         'VCA_DBDL' => __DIR__ . '/../..' . '/inc/VCA-DBDL.php',
         'VCA_Flash_Message' => __DIR__ . '/../..' . '/inc/admin/VCA-flash-message.php',
         'VCA_Menu' => __DIR__ . '/../..' . '/inc/admin/VC_menu.php',
+        'VCA_admin_Callrequest_maneger' => __DIR__ . '/../..' . '/inc/admin/views/admin-Callrequest-maneger.php',
         'VCA_admin_ajax' => __DIR__ . '/../..' . '/inc/admin/VCA-admin-ajax.php',
         'VCA_admin_status_maneger' => __DIR__ . '/../..' . '/inc/admin/views/admin-status-maneger.php',
         'VCA_ferant_ajax' => __DIR__ . '/../..' . '/inc/frant/VCA-ferant-ajax.php',
