@@ -148,6 +148,23 @@ if (class_exists('CSF')) {
       ),
     )
   ));
+  CSF::createSection($prefix, array(
+    'title'  => 'متن ارور و تایید',
+    'fields' => array(
+      array(
+        'id'         => 'VCA-errors-Name-and-surname-text',
+        'type'       => 'text',
+        'title'      => 'متن درصورت خالی بودن فیلد نام و نام خانوادگی',
+        'default' => 'لطفا نام و نام خانوادگی خود را وارد نمایید',
+      ),
+      array(
+        'id'         => 'VCA-errors-phone-text',
+        'type'       => 'text',
+        'title'      => 'متن درصورت خالی بودن فیلد شماره تماس',
+        'default' => 'لطفا شماره تماس خود را برای تماس وارد نمایید',
+      ),
+    )
+  ));
   function my_Callrequest()
   {
     echo "<h3>توضیحات</h3>";

@@ -22,7 +22,7 @@ $options = get_option('VCA-settings'); ?>
         }
     } ?>
 </div>
-
+<?php VCA_Flash_Message::show_message(); ?>
 <div class="VCA-Callrequest-table">
     <table>
         <thead>
@@ -43,7 +43,7 @@ $options = get_option('VCA-settings'); ?>
                         <td><?php echo esc_html($Callrequest_item->phone) ?></td>
                         <?php $status = $this->status($Callrequest_item->ID_status); ?>
                         <td style=" color:<?php echo esc_attr($status->icon_color); ?>;"><?php echo esc_html($status->name); ?></td>
-                        <td><a href="" title="ویرایش وضعیت"><i class="ip-ar-circle-s"></i></a> | <a href="" title="حذف"><i class="ip-ar-circle-trash"></i></a></td>
+                        <td><a href="<?php echo esc_url(admin_url('admin.php?page=VCA-Callrequest&action=edit&id=' . $Callrequest_item->ID)) ?>" title="ویرایش وضعیت"><i class="ip-ar-circle-s"></i></a> | <a href="<?php echo wp_nonce_url(admin_url('admin.php?page=VCA-Callrequest&action=delete&id=' . $Callrequest_item->ID), 'delete_Callrequest', 'delete_Callrequest_nonce') ?>" title="حذف"><i class="ip-ar-circle-trash"></i></a></td>
                     </tr>
                 <?php endforeach; ?>
             <?php endif; ?>
