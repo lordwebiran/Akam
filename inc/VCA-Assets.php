@@ -1,7 +1,7 @@
 <?php
-if (!defined('ABSPATH')) {
-    exit;
-}
+
+defined("ABSPATH") || exit();
+
 
 class VCA_Assets
 {
@@ -31,9 +31,6 @@ class VCA_Assets
     {
         //style
         wp_enqueue_style('VCA-admin', VCA_ASSETS . 'css/VCA-admin.css');
-        wp_enqueue_style('VCA-admin-bootstrap-rtl', VCA_ASSETS . 'vertical-tab/css/bootstrap-rtl.css');
-        wp_enqueue_style('VCA-admin-style', VCA_ASSETS . 'vertical-tab/css/style.css');
-        wp_enqueue_style('VCA-admin-accordion-menu-style', VCA_ASSETS . 'accordion-menu/css/style.css');
 
         //script
         wp_enqueue_script('jquery');
@@ -42,9 +39,6 @@ class VCA_Assets
             'ajax_url' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('VC_ajax_nonce')
         ]);
-        wp_enqueue_script('VCA-admin-bootstrap-min', VCA_ASSETS . 'vertical-tab/js/bootstrap.min.js', array('jquery'), null, true);
-        wp_enqueue_script('VCA-admin-scripts', VCA_ASSETS . 'vertical-tab/js/scripts.js', array('jquery'), null, true);
-        wp_enqueue_script('VCA-admin-accordion-menu-scripts', VCA_ASSETS . 'accordion-menu/js/scripts.js', array('jquery'), null, true);
     }
     function fontawesome()
     {

@@ -1,9 +1,9 @@
 <?php
 
 /*
-Plugin Name: ارتباط با ما
+Plugin Name: ارتباط‌‌ با ما
 Plugin URI: https://www.rtl-theme.com/author/viennacompany/products/
-Description: افزونه حر فه ای ارتباط با ما
+Description: افزونه حرفه‌ای ارتباط‌‌‌ با ما
 Author: شرکت پرتو گستر ویانا
 Version: 1.0.0
 Author URI: https://www.rtl-theme.com/author/viennacompany/
@@ -26,7 +26,9 @@ class VC_akam_Core
         if (is_null(self::$__instance)) {
             self::$__instance = new self();
         }
+        return self::$__instance;
     }
+
     public function __construct()
     {
         if (version_compare(PHP_VERSION, self::MINIMUM_PHP_VERSION, '<')) {
@@ -62,20 +64,7 @@ class VC_akam_Core
         register_activation_hook(VCA_BASE_FILE, [$this, 'active']);
         register_deactivation_hook(VCA_BASE_FILE, [$this, 'deative']);
         require_once VCA_INC . 'admin/codestar/codestar-framework.php';
-        require_once VCA_INC.'admin/VCA-settings.php';
-        if (is_admin()) {
-            new VCA_Menu();
-        }
-        new VCA_admin_ajax();
-        new VCA_ferant_ajax();
-        new VCA_Assets();
-
-        function Callrequest()
-        {
-            require_once VCA_INC.'frant/views/Callrequest/Callrequest.php';
-        }
-        add_shortcode('Callrequest', 'Callrequest');
-
+        require_once VCA_INC . 'functions.php';
     }
 
     public function active()

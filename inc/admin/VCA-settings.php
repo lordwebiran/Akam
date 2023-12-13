@@ -102,6 +102,52 @@ if (class_exists('CSF')) {
 
     )
   ));
+  CSF::createSection($prefix, array(
+    'title'  => 'باکس آیتم درخواست تماس',
+    'fields' => array(
+
+      array(
+        'id'         => 'VCA-item-status',
+        'type'       => 'switcher',
+        'title'      => 'فعال سازی ایتم باکس',
+        'default'    => false
+      ),
+      array(
+        'id'     => 'VCA-item-status-repeater',
+        'type'   => 'repeater',
+        'title'  => 'ایجاد ایتم باکس',
+        'fields' => array(
+          array(
+            'id'    => 'VCA-item-status-Callreques',
+            'type'        => 'select',
+            'title' => 'انتخاب ایتم باکس',
+            'chosen'      => true,
+            'placeholder' => 'انتخاب کنید',
+            'options' => 'get_status_data',
+            'default'     => '1'
+          ),
+          array(
+            'id'         => 'VCA-item-status-Callreques-text',
+            'type'       => 'text',
+            'title'      => 'پسونده شمارنده',
+            'default' => 'عدد',
+          ),
+        ),
+        'dependency' => array('VCA-item-status', '==', 'true'),
+         'max'=> 6,
+        'default'   => array(
+          array(
+            'VCA-item-status-Callreques' => '1',
+            'VCA-item-status-Callreques-text' => 'عدد',
+          ),
+          array(
+            'VCA-item-status-Callreques' => '2',
+            'VCA-item-status-Callreques-text' => 'عدد',
+          )
+        )
+      ),
+    )
+  ));
   function my_Callrequest()
   {
     echo "<h3>توضیحات</h3>";
@@ -167,22 +213,6 @@ if (class_exists('CSF')) {
       ),
     )
   ));
-  //CSF::createSection($prefix, array(
-  //  'title'  => 'تماس با ما',
-  //  'fields' => array(
-
-  //    array(
-  //      'type'    => 'callback',
-  //      'function' => 'contact_us',
-  //    ),
-
-  //  )
-  //));
-  //function contact_us()
-  //{
-  //  echo "<h3>در دست ساخت</h3>";
-  //  echo "<p>در بروز رسانی ورژن 1.5.0 در دسترس قرار میگیرد</p>";
-  //}
   CSF::createSection($prefix, array(
     'title'  => 'بکاپ',
     'fields' => array(

@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('ABSPATH')) {
     exit;
 }
@@ -10,6 +11,6 @@ class VCA_ferant_ajax{
     }
 
     public function submit_Callrequest(){
-        var_dump($_POST);
+        
     }
 }

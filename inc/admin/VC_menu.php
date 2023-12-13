@@ -33,13 +33,6 @@ class VCA_Menu extends Base_Menu{
                 'callback'  =>'VCA_Floatbutton',
                 'position'  => 3,
             ],
-            //'contact_us'=>[
-            //    'page_title'=>'تماس با ما',
-            //    'menu_title'=>'تماس با ما',
-            //    'menu_slug' =>'VCA-contact-us',
-            //    'callback'  =>'VCA_contact_us',
-            //    'position'  => 4,
-            //],
             'settings'=>[
                 'page_title'=>'تنظیمات',
                 'menu_title'=>'تنظیمات',
@@ -64,9 +57,6 @@ class VCA_Menu extends Base_Menu{
     }
     public function VCA_Floatbutton(){
         echo '<h2>به زودی</h2><p>در ورژن دو ایجاد می شود در صورت درخواست کارفرما</p>';
-    }
-    public function VCA_contact_us(){
-        echo '<h2 class="VCA-Vazir">در دست ساخت</h2><p class="VCA-Vazir">در بروز رسانی ورژن 1.5.0 در دسترس قرار میگیرد</p>';
     }
 
 } 

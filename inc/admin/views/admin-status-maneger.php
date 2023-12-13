@@ -40,6 +40,8 @@ class VCA_admin_status_maneger
             if (isset($_GET['delete_status_nonce']) && wp_verify_nonce($_GET['delete_status_nonce'], 'delete_status')) {
                 $this->delete($_GET['id']);
                 VCA_Flash_Message::add_message('با موفقیت حذف شد');
+                $status = $this->get_status();
+                require VCA_admin . 'views/status/mine.php';
             }
         } elseif (isset($_GET['action']) && $_GET['action'] == 'edit') {
             $status = $this->status($_GET['id']);

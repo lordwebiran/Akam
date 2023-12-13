@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('ABSPATH')) {
     exit;
 }
@@ -30,7 +31,7 @@ class VCA_DB
         $Callrequest_sql = "CREATE TABLE IF NOT EXISTS `" . $VCA_Callrequest . "` (
             `ID` bigint(20) NOT NULL AUTO_INCREMENT,
             `NF` varchar(128) NOT NULL,
-            `phone` INT DEFAULT NULL,
+            `phone` varchar(128) NOT NULL,
             `ID_status` INT DEFAULT NULL,
             PRIMARY KEY (`ID`),
             KEY `ID_status` (`ID_status`))
@@ -53,21 +54,20 @@ class VCA_DB
         dbDelta($status_sql);
         $data_to_insert = array(
             array(
-                'name' => 'تماس گرفته شود',
+                'name' => 'درخواست تماس',
                 'icon' =>'ip-ar-message-exclamation',
-                'icon_color' => '#f77f00',
+                'icon_color' => '#f77f00'
             ),
             array(
                 'name' => 'تماس انجام شد',
                 'icon' =>'ip-ar-message-smile',
-                'icon_color' => '#386641',
+                'icon_color' => '#386641'
             ),
         );
-
-        // افزودن اطلاعات به جدول
         foreach ($data_to_insert as $data) {
             $wpdb->insert($VCA_status, $data);
         }
+        
         dbDelta($Callrequest_sql);
         dbDelta($Floatbutton_sql);
     }

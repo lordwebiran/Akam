@@ -5,24 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var hbtnitem = document.querySelector(".h_btn_item");
 
     VCAButton.addEventListener("click", function () {
-        // چک کردن اگر .VCA-floating مخفی باشد
         if (VCAFloating.classList.contains("displaynone")) {
-            // نمایش .VCA-floating
             VCAFloating.classList.remove("displaynone");
 
-            // مخفی کردن ایتم‌های با کلاس btn_item
             btnItems.forEach(function (btnItem) {
                 btnItem.style.display = "none";
                 hbtnitem.style.transform = "rotate(45deg)";
                 hbtnitem.style.display = "block";
             });
         } else {
-            // در صورت کلیک دوباره، بازگرداندن به وضعیت اولیه
             VCAFloating.classList.add("displaynone");
-
-            // نمایش مجدد ایتم‌های با کلاس btn_item
             btnItems.forEach(function (btnItem) {
-                btnItem.style.display = "block"; // یا مقدار دلخواه شما
+                btnItem.style.display = "block";
                 hbtnitem.style.display = "none";
             });
         }
@@ -31,23 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var VCAItems = document.querySelectorAll(".VCA-item");
     VCAItems.forEach(function (VCAItem) {
         VCAItem.addEventListener("click", function () {
-            // چک کردن اگر .VCA-floating مخفی باشد
             if (VCAFloating.classList.contains("displaynone")) {
-                // نمایش .VCA-floating
                 VCAFloating.classList.remove("displaynone");
 
-                // مخفی کردن ایتم‌های با کلاس btn_item
                 btnItems.forEach(function (btnItem) {
                     btnItem.style.display = "none";
                     hbtnitem.style.display = "block";
                 });
             } else {
-                // در صورت کلیک دوباره، بازگرداندن به وضعیت اولیه
+
                 VCAFloating.classList.add("displaynone");
 
-                // نمایش مجدد ایتم‌های با کلاس btn_item
                 btnItems.forEach(function (btnItem) {
-                    btnItem.style.display = "block"; // یا مقدار دلخواه شما
+                    btnItem.style.display = "block"; 
                     hbtnitem.style.display = "none";
                 });
             }
@@ -82,6 +72,7 @@ jQuery(document).ready(function () {
 
             },
             error: function (error) {
+
             },
             complete:function () {
                 submit.prop('disabled', false);

@@ -35,7 +35,7 @@
             <div class="col-wrap">
                 <div style="position: absolute; left: 30px;">
                     <div style="background-color: lightgray; /* width: 200px; */ border-radius: 20px; text-align: center; justify-content: center; display: inline-flex;">
-                        <p class="VCA-Vazir" style=" margin: auto 0px; padding-right: 6px;"><?php echo esc_attr($status->name)  ?></p><span style="position: relative; right: 5px; top: -10px; background-color: ghostwhite; padding: 5px; border-radius: 50%; width: 20px; height: 20px; text-align: center; justify-content: center;"><i style="color:<?php echo esc_attr($status->icon_color)  ?>;" class="<?php echo esc_attr($status->icon)  ?>"></i></span>
+                       <?php echo '<p class="VCA-Vazir" style=" margin: auto 0px; padding-right: 6px;">'.esc_attr($status->name).'</p><span style="position: relative; right: 5px; top: -10px; background-color: ghostwhite; padding: 5px; border-radius: 50%; width: 20px; height: 20px; text-align: center; justify-content: center;"><i style="color:'.esc_attr($status->icon_color).';" class="'.esc_attr($status->icon).'"></i></span>' ?>
                     </div>
                 </div>
             </div>

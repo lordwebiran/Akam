@@ -64,6 +64,17 @@ class VCA_admin_Callrequest_maneger
     {
         return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM " . $this->table . " WHERE ID=%d", $id));
     }
+    private function status($id)
+    {
+        return $this->wpdb->get_row($this->wpdb->prepare("SELECT * FROM " . $this->status . " WHERE ID=%d", $id));
+    }
+    private function Callreques_status($status_id)
+    {
+        $result = $this->wpdb->get_results($this->wpdb->prepare("SELECT * FROM " . $this->table . " WHERE ID_status=%d", $status_id));
+
+        return count($result);
+    }
+
 
     public function get_status()
     {
