@@ -76,7 +76,7 @@ return array(
     'VCA_admin_ajax' => $baseDir . '/inc/admin/VCA-admin-ajax.php',
     'VCA_admin_status_maneger' => $baseDir . '/inc/admin/views/admin-status-maneger.php',
     'VCA_ferant_ajax' => $baseDir . '/inc/frant/VCA-ferant-ajax.php',
-    'VC_Order_Manager_admin' => $baseDir . '/inc/frant/views/Callrequest.php',
+    'VC_Callrequest_Manager_ferant' => $baseDir . '/inc/frant/views/Callrequest.php',
     'WP_Customize_Control_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
     'WP_Customize_Panel_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
     'WP_Customize_Section_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',

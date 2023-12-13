@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
+class ComposerStaticInit3981d27d2cc5961f7331dc3eea3934dd
 {
     public static $classMap = array (
         'Base_Menu' => __DIR__ . '/../..' . '/inc/admin/astract/base-menu.php',
@@ -77,7 +77,7 @@ class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
         'VCA_admin_ajax' => __DIR__ . '/../..' . '/inc/admin/VCA-admin-ajax.php',
         'VCA_admin_status_maneger' => __DIR__ . '/../..' . '/inc/admin/views/admin-status-maneger.php',
         'VCA_ferant_ajax' => __DIR__ . '/../..' . '/inc/frant/VCA-ferant-ajax.php',
-        'VC_Order_Manager_admin' => __DIR__ . '/../..' . '/inc/frant/views/Callrequest.php',
+        'VC_Callrequest_Manager_ferant' => __DIR__ . '/../..' . '/inc/frant/views/Callrequest.php',
         'WP_Customize_Control_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Panel_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Section_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
@@ -86,7 +86,7 @@ class ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit006e04f2f2ba1f2edbce94ab2862ca32::$classMap;
+            $loader->classMap = ComposerStaticInit3981d27d2cc5961f7331dc3eea3934dd::$classMap;
 
         }, null, ClassLoader::class);
     }
