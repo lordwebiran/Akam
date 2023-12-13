@@ -8,7 +8,6 @@ class VCA_DB
 {
     public static function create_table()
     {
-        // تعریف جدول
         global $wpdb;
         $VCA_status = $wpdb->prefix . 'VCA_status';
         $VCA_Callrequest = $wpdb->prefix . 'VCA_Callrequest';
@@ -16,8 +15,6 @@ class VCA_DB
 
         $charset_collate = $wpdb->get_charset_collate();
 
-
-        //جدول وضعیت درخواست تماس
         $status_sql = "CREATE TABLE IF NOT EXISTS `" . $VCA_status . "` (
             `ID` bigint(20) NOT NULL AUTO_INCREMENT,
             `name` varchar(128) NOT NULL,
@@ -26,8 +23,6 @@ class VCA_DB
             PRIMARY KEY (`ID`))
             ENGINE=InnoDB " . $charset_collate . ";";
 
-
-        //جدول درخواست تماس
         $Callrequest_sql = "CREATE TABLE IF NOT EXISTS `" . $VCA_Callrequest . "` (
             `ID` bigint(20) NOT NULL AUTO_INCREMENT,
             `NF` varchar(128) NOT NULL,
@@ -37,7 +32,6 @@ class VCA_DB
             KEY `ID_status` (`ID_status`))
             ENGINE=InnoDB " . $charset_collate . ";";
 
-        // تعریف جدول دکمه شناور
         $Floatbutton_sql = "CREATE TABLE IF NOT EXISTS `" . $VCA_Floatbutton . "` (
             `ID` bigint(20) NOT NULL AUTO_INCREMENT,
             `name` varchar(128) NOT NULL,
