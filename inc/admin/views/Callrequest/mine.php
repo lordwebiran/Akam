@@ -44,7 +44,7 @@ $options = get_option('VCA-settings'); ?>
                         <?php $status = $this->status($Callrequest_item->ID_status); ?>
                         <td style=" color:<?php echo esc_attr($status->icon_color); ?>;"><?php echo esc_html($status->name); ?></td>
                         <td><a href="" title="ویرایش وضعیت"><i class="ip-ar-circle-s"></i></a> | <a href="" title="حذف"><i class="ip-ar-circle-trash"></i></a></td>
-                    </tr>
+                    </tr> 
                 <?php endforeach; ?>
             <?php endif; ?>
         </tbody>
