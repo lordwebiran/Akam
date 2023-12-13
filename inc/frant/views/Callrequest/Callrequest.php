@@ -16,5 +16,5 @@
       <?php echo esc_html($options['VCA-text-button']); ?>
     </button>
   </form>
-  <div class="libel-alert VCA-Vazir"></div>
+  <div class="libel-alert VCA-Vazir d-none"></div>
 </section>

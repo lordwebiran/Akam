@@ -15,8 +15,12 @@ function Callrequest()
 }
 add_shortcode('Callrequest', 'Callrequest');
 
+$options = get_option('VCA-settings');
+
+if ($options['VCA-Floatbutton-switcher'] == true) {
+    add_action('wp_footer', 'Floatbutton');
+}
 function Floatbutton()
 {
     require_once VCA_INC . 'frant/views/Floatbutton/Floatbutton.php';
 }
-add_action('wp_footer', 'Floatbutton');

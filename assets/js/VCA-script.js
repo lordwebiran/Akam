@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 VCAFloating.classList.add("displaynone");
 
                 btnItems.forEach(function (btnItem) {
-                    btnItem.style.display = "block"; 
+                    btnItem.style.display = "block";
                     hbtnitem.style.display = "none";
                 });
             }
@@ -69,15 +69,26 @@ jQuery(document).ready(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-
+                if (response.results == null) {
+                    jQuery(".libel-alert").text(response.results);
+                } else {
+                    jQuery(".Callrequest").addClass("d-none");
+                    jQuery(".VCA-texth").addClass("d-none");
+                    jQuery(".libel-alert").removeClass("d-none");
+                    jQuery(".libel-alert").html( "کد پیگیری شما :" + response.results+"<br><br>"+response.text );
+                }
             },
             error: function (error) {
-
             },
-            complete:function () {
+            complete: function () {
                 submit.prop('disabled', false);
                 submit.html('درخواست تماس');
             },
         });
+        setTimeout(function () {
+            jQuery(".Callrequest").removeClass("d-none").trigger("reset");
+            jQuery(".VCA-texth").removeClass("d-none");
+            jQuery(".libel-alert").addClass("d-none");
+        }, 10000);
     });
 });

@@ -163,6 +163,21 @@ if (class_exists('CSF')) {
         'title'      => 'متن درصورت خالی بودن فیلد شماره تماس',
         'default' => 'لطفا شماره تماس خود را برای تماس وارد نمایید',
       ),
+      array(
+        'id'         => 'VCA-alert-text',
+        'type'       => 'text',
+        'title'      => 'متن ارسال درست درخواست',
+        'default' => 'با تشکر از شما ما به شما به زودی تماس میگیریم',
+      ),
+      array(
+        'id'          => 'VCA-alert-tex-color',
+        'type'        => 'color',
+        'title'       => 'رنگ متن ارسال درست',
+        'output'      => '.VCA-Callrequest .libel-alert',
+        'output_mode' => 'color',
+        'default' => '#006400',
+        'output_important' => true
+      ),
     )
   ));
   function my_Callrequest()
@@ -224,8 +239,120 @@ if (class_exists('CSF')) {
         'title'        => 'عکس روی دکمه شناور',
         'library'      => 'image',
         'placeholder'  => VCA_IMG_FRONT . 'phone-arrow-down-left-512.png',
+        'default' => VCA_IMG_FRONT . 'phone-arrow-down-left-512.png',
         'button_title' => 'افزودن عکس',
         'remove_title' => 'حذف کردن عکس',
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-text-color-2',
+        'type'        => 'color',
+        'title'       => 'رنگ متن دکمه شناور',
+        'output'      => '.VCA-Button',
+        'output_mode' => 'color',
+        'default' => '#000',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-button-color',
+        'type'        => 'color',
+        'title'       => 'رنگ پس زمینه دکمه شناور',
+        'output'      => '.VCA-Button',
+        'output_mode' => 'background-color',
+        'default' => '#faebd7',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-titel-text-color',
+        'type'        => 'color',
+        'title'       => 'رنگ متن هدر ',
+        'output'      => '.VCA-titel',
+        'output_mode' => 'color',
+        'default' => '#fff',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-titel-background-color',
+        'type'        => 'color',
+        'title'       => 'رنگ پس زمینه هدر',
+        'output'      => '.VCA-titel',
+        'output_mode' => 'background-color',
+        'default' => '#a52a2a',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      
+      array(
+        'id'          => 'VCA-Floatbutton-border-right-color',
+        'type'        => 'color',
+        'title'       => 'رنگ خط سمت راست',
+        'output'      => '.VCA-body',
+        'output_mode' => 'border-right-color',
+        'default' => '#a52a2a',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-border-left-color',
+        'type'        => 'color',
+        'title'       => 'رنگ خط سمت چپ',
+        'output'      => '.VCA-body',
+        'output_mode' => 'border-left-color',
+        'default' => '#a52a2a',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-body-background-color',
+        'type'        => 'color',
+        'title'       => 'رنگ پس زمینه ایتم ها',
+        'output'      => '.VCA-body',
+        'output_mode' => 'background-color',
+        'default' => '#fff',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-border-item-color',
+        'type'        => 'color',
+        'title'       => 'رنگ خط دور ایتم',
+        'output'      => '.VCA-item',
+        'output_mode' => 'border-bottom-color',
+        'default' => '#a52a2a',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-a-item-color',
+        'type'        => 'color',
+        'title'       => 'رنگ متن آیتم',
+        'output'      => '.VCA-body a',
+        'output_mode' => 'color',
+        'default' => '#000',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-img-background-color',
+        'type'        => 'color',
+        'title'       => 'رنگ پس زمینه آیکون ها',
+        'output'      => '.VCA-item img',
+        'output_mode' => 'background-color',
+        'default' => '#faebd7',
+        'output_important' => true,
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'          => 'VCA-Floatbutton-footer-background-color',
+        'type'        => 'color',
+        'title'       => 'رنگ پس زمینه فوتر',
+        'output'      => '.VCA-footer',
+        'output_mode' => 'background-color',
+        'default' => '#a52a2a',
+        'output_important' => true,
         'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
       ),
     )

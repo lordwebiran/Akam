@@ -105,7 +105,6 @@
     border-radius: 100%;
     text-align: center;
     color: #000;
-    border: #000 dotted 1px;
 }
 
 .VCA-Button img {
@@ -175,6 +174,10 @@
     display: inline-block;
 }
 
+.d-none{
+    display: none;
+}
+
 .VCA-Callrequest .VCA-texth h3 {
     padding: 0;
     margin: 0;
@@ -216,9 +219,8 @@
 
 .VCA-Callrequest .libel-alert {
     text-align: center;
-    font-size: 20px;
-    display: none;
-    color: darkgreen;
+    font-size: 16px;
+    color: #006400;
 }
 
 /* استایل‌های مخصوص گوشی‌ها با عرض 992px به بالا */
@@ -250,7 +252,7 @@
 
 @media only screen and (min-width: 1600px) {
     .VCA-Callrequest form.Callrequest button {
-        width: 10%;
+        width: 15%;
         margin-left: 15px;
     }
 }
