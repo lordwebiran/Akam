@@ -72,14 +72,16 @@
     border-bottom: brown solid 1px;
 }
 
-.VCA-item img {
-    width: 25px;
+.VCA-item i {
+    width: 35px;
+    height: 35px;
     float: left;
     margin-top: -4px;
     margin-left: 10px;
     background-color: antiquewhite;
-    padding: 5px;
     border-radius: 100%;
+    font-size: 25px;
+    text-align: center;
 }
 
 .VCA-item p {
@@ -174,7 +176,7 @@
     display: inline-block;
 }
 
-.d-none{
+.d-none {
     display: none;
 }
 

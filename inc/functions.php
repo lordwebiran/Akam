@@ -22,5 +22,6 @@ if ($options['VCA-Floatbutton-switcher'] == true) {
 }
 function Floatbutton()
 {
-    require_once VCA_INC . 'frant/views/Floatbutton/Floatbutton.php';
+    $floatbuttonManager = new VCA_Floatbutton_maneger_ferant();
+    $floatbuttonManager->page();
 }

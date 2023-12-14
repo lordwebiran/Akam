@@ -109,7 +109,7 @@ if (class_exists('CSF')) {
         'id'         => 'VCA-item-status',
         'type'       => 'switcher',
         'title'      => 'فعال سازی ایتم باکس',
-        'default'    => false
+        'default'    => true
       ),
       array(
         'id'     => 'VCA-item-status-repeater',

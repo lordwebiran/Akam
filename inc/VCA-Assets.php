@@ -52,7 +52,9 @@ class VCA_Assets
         wp_enqueue_style('VCA-v4-font-face', VCA_fontawesome . 'css/v4-font-face.min.css');
         wp_enqueue_style('VCA-v4-shims', VCA_fontawesome . 'css/v4-shims.min.css');
         wp_enqueue_style('VCA-v5-font-face', VCA_fontawesome . 'css/v5-font-face.min.css');
+        wp_enqueue_style('VCA-ip-awesome-solid', 'https://cdn.iconplanet.app/uicons/awesome-solid/css/ip-awesome-solid.css');
         wp_enqueue_style('VCA-ip-awesome-regular', 'https://cdn.iconplanet.app/uicons/awesome-regular/css/ip-awesome-regular.css');
+        wp_enqueue_style('VCA-ip-brands', 'https://cdn.iconplanet.app/uicons/brands/css/ip-brands.css');
 
 
         //script

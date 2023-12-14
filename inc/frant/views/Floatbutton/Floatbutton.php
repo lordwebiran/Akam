@@ -6,13 +6,16 @@
     </div>
     <div class="VCA-body">
 
-      <a href="1">
-        <div class="VCA-item">
-          <img src="../../../assets/img/skype-512.png" />
-          <p class="VCA-Vazir">درخواست تماس</p>
-        </div>
-      </a>
-
+      <?php if (isset($Floatbutton) && is_array($Floatbutton) && count($Floatbutton) > 0) : ?>
+        <?php foreach ($Floatbutton as $item) : ?>
+          <a href="<?php echo esc_url($item->link) ?>" target="_blank">
+            <div class="VCA-item">
+              <i style="color:<?php echo esc_attr($item->icon_color) ?>" class="<?php echo esc_html($item->icon) ?>"></i>
+              <p class="VCA-Vazir"><?php echo esc_html($item->name) ?></p>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      <?php endif; ?>
 
     </div>
     <div class="VCA-footer"></div>

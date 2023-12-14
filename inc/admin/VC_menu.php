@@ -56,7 +56,8 @@ class VCA_Menu extends Base_Menu{
         $status->page();
     }
     public function VCA_Floatbutton(){
-        echo '<h2>به زودی</h2><p>در ورژن دو ایجاد می شود در صورت درخواست کارفرما</p>';
+        $status= new VCA_admin_Floatbutton_maneger();
+        $status->page();
     }
 
 } 

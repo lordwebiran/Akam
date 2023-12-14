@@ -2,7 +2,6 @@
     <h1 class="wp-heading-inline">ویرایش : کد <?php echo esc_attr($Callrequest->ID)  ?></h1>
     <hr class="wp-header-end" />
     <?php VCA_Flash_Message::show_message(); ?>
-
     <hr class="wp-header-end">
     <div id="ajax-response"></div>
     <div id="col-container" class="wp-clearfix">

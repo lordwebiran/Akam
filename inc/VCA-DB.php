@@ -43,7 +43,8 @@ class VCA_DB
             `name` varchar(128) NOT NULL,
             `position` INT DEFAULT NULL,
             `link` text NOT NULL,
-            `img` text NOT NULL,
+            `icon` varchar(128) NOT NULL,
+            `icon_color` varchar(128) NOT NULL,
             PRIMARY KEY (`ID`))
             ENGINE=InnoDB " . $charset_collate . ";";
 
@@ -55,19 +56,19 @@ class VCA_DB
         $data_to_insert = array(
             array(
                 'name' => 'درخواست تماس',
-                'icon' =>'ip-ar-message-exclamation',
+                'icon' => 'ip-ar-message-exclamation',
                 'icon_color' => '#f77f00'
             ),
             array(
                 'name' => 'تماس انجام شد',
-                'icon' =>'ip-ar-message-smile',
+                'icon' => 'ip-ar-message-smile',
                 'icon_color' => '#386641'
             ),
         );
         foreach ($data_to_insert as $data) {
             $wpdb->insert($VCA_status, $data);
         }
-        
+
         dbDelta($Callrequest_sql);
         dbDelta($Floatbutton_sql);
     }
