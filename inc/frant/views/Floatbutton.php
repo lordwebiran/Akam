@@ -8,7 +8,7 @@ class VCA_Floatbutton_maneger_ferant
     private $wpdb;
     private $table;
 
-    const TABLE_NAME = 'vca_floatbutton';
+    const TABLE_NAME = 'VCA_Floatbutton';
 
     public function __construct()
     {
