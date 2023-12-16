@@ -8,10 +8,6 @@ class ComposerStaticInit3981d27d2cc5961f7331dc3eea3934dd
 {
     public static $classMap = array (
         'Base_Menu' => __DIR__ . '/../..' . '/inc/admin/astract/base-menu.php',
-        'CHT\\admin\\CHT_PRO_Admin_Base' => __DIR__ . '/../..' . '/inc/plugins/chaty-pro/admin/class-admin-base.php',
-        'CHT\\admin\\CHT_PRO_Social_Icons' => __DIR__ . '/../..' . '/inc/plugins/chaty-pro/admin/class-social-icons.php',
-        'CHT\\frontend\\CHT_PRO_Frontend' => __DIR__ . '/../..' . '/inc/plugins/chaty-pro/includes/class-frontend.php',
-        'CHT\\includes\\CHT_PRO_Widget' => __DIR__ . '/../..' . '/inc/plugins/chaty-pro/includes/class-cht-icons.php',
         'CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/setup.class.php',
         'CSF_Abstract' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/abstract.class.php',
         'CSF_Comment_Metabox' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/comment-options.class.php',
@@ -71,12 +67,8 @@ class ComposerStaticInit3981d27d2cc5961f7331dc3eea3934dd
         'CSF_Walker_Nav_Menu_Edit' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/walker.php',
         'CSF_Welcome' => __DIR__ . '/../..' . '/inc/admin/codestar/views/welcome.php',
         'CSF_Widget' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/widget-options.class.php',
-        'Chaty_Pro_Review_Box' => __DIR__ . '/../..' . '/inc/plugins/chaty-pro/includes/class-review-box.php',
-        'Chaty_SL_Plugin_Updater' => __DIR__ . '/../..' . '/inc/plugins/chaty-pro/includes/EDD_SL_Plugin_Updater.php',
-        'Chaty_license_key_box' => __DIR__ . '/../..' . '/inc/plugins/chaty-pro/includes/license-key-box.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Elementor_Callrequest_Widget' => __DIR__ . '/../..' . '/inc/admin/elementor/widgets/Callrequest.php',
-        'Functions_plugins' => __DIR__ . '/../..' . '/inc/plugins/functions.php',
         'VCA_Assets' => __DIR__ . '/../..' . '/inc/VCA-Assets.php',
         'VCA_DB' => __DIR__ . '/../..' . '/inc/VCA-DB.php',
         'VCA_DBDL' => __DIR__ . '/../..' . '/inc/VCA-DBDL.php',
