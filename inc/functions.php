@@ -8,6 +8,7 @@ if (is_admin()) {
 new VCA_admin_ajax();
 new VCA_ferant_ajax();
 new VCA_Assets();
+new elementor_VCA_widget();
 
 function Callrequest()
 {

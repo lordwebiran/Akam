@@ -1,6 +1,6 @@
-<section class="VCA-Floatbutton">
-  <?php $options = get_option('VCA-settings'); ?>
-  <div class="VCA-floating displaynone">
+<?php $options = get_option('VCA-settings'); ?>
+<section class="VCA-Floatbutton <?php if($options['VCA-Floatbutton-btn-set']=='right'){echo esc_attr('VCA-Floatbutton-right');}elseif($options['VCA-Floatbutton-btn-set']=='left'){echo esc_attr('VCA-Floatbutton-left');} ?>">
+  <div class="VCA-floating displaynone <?php if($options['VCA-Floatbutton-btn-set']=='right'){echo esc_attr('VCA-floating-right');}elseif($options['VCA-Floatbutton-btn-set']=='left'){echo esc_attr('VCA-floating-left');} ?>">
     <div class="VCA-titel">
       <p class="VCA-Vazir"><?php echo esc_html($options['VCA-Floatbutton-text']); ?></p>
     </div>

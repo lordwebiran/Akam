@@ -68,6 +68,7 @@ class ComposerStaticInit3981d27d2cc5961f7331dc3eea3934dd
         'CSF_Welcome' => __DIR__ . '/../..' . '/inc/admin/codestar/views/welcome.php',
         'CSF_Widget' => __DIR__ . '/../..' . '/inc/admin/codestar/classes/widget-options.class.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Elementor_Callrequest_Widget' => __DIR__ . '/../..' . '/inc/admin/elementor/widgets/Callrequest.php',
         'VCA_Assets' => __DIR__ . '/../..' . '/inc/VCA-Assets.php',
         'VCA_DB' => __DIR__ . '/../..' . '/inc/VCA-DB.php',
         'VCA_DBDL' => __DIR__ . '/../..' . '/inc/VCA-DBDL.php',
@@ -83,6 +84,7 @@ class ComposerStaticInit3981d27d2cc5961f7331dc3eea3934dd
         'WP_Customize_Control_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Panel_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
         'WP_Customize_Section_CSF' => __DIR__ . '/../..' . '/inc/admin/codestar/functions/customize.php',
+        'elementor_VCA_widget' => __DIR__ . '/../..' . '/inc/admin/elementor/oembed.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

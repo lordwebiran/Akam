@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'vc-faicons';
+  src:  url('fonts/vc-faicons.eot');
+  src:  url('fonts/vc-faicons.eot?#iefix') format('embedded-opentype'),
+    url('fonts/vc-faicons.woff2') format('woff2'),
+    url('fonts/vc-faicons.ttf') format('truetype'),
+    url('fonts/vc-faicons.woff') format('woff'),
+    url('fonts/vc-faicons.svg?#vc-faicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="VCA-i-"], [class*=" VCA-i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'vc-faicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.VCA-i-eitaa:before {
+  content: "\e97c";
+}
+.VCA-i-soroush:before {
+  content: "\e97d";
+}
+.VCA-i-bale:before {
+  content: "\e97e";
+}
+.VCA-i-gap:before {
+  content: "\e900";
+}
+.VCA-i-bisphone:before {
+  content: "\e916";
+}
+.VCA-i-EFA:before {
+  content: "\e917";
+  color: #eb345e;
+}
+.VCA-i-Enbank:before {
+  content: "\e918";
+}
+.VCA-i-aparat:before {
+  content: "\e919";
+}
+.VCA-i-cloob:before {
+  content: "\e91a";
+}
+.VCA-i-dey:before {
+  content: "\e91b";
+}
+.VCA-i-gardeshgari:before {
+  content: "\e91c";
+}
+.VCA-i-Hekmat:before {
+  content: "\e91d";
+}
+.VCA-i-iranzamin:before {
+  content: "\e91e";
+}
+.VCA-i-ghavamin:before {
+  content: "\e91f";
+}
+.VCA-i-markazi:before {
+  content: "\e920";
+}
+.VCA-i-mehr:before {
+  content: "\e921";
+}
+.VCA-i-mellat:before {
+  content: "\e922";
+}
+.VCA-i-melli:before {
+  content: "\e923";
+}
+.VCA-i-parsian:before {
+  content: "\e924";
+}
+.VCA-i-refah:before {
+  content: "\e925";
+}
+.VCA-i-saderat:before {
+  content: "\e926";
+}
+.VCA-i-salehin:before {
+  content: "\e927";
+}
+.VCA-i-saman:before {
+  content: "\e928";
+}
+.VCA-i-sarmayeh:before {
+  content: "\e929";
+}
+.VCA-i-Mahak:before {
+  content: "\e93e";
+}
+.VCA-i-Maskan:before {
+  content: "\e940";
+}
+.VCA-i-MEBank:before {
+  content: "\e941";
+}
+.VCA-i-Mehreghtesad:before {
+  content: "\e942";
+}
+.VCA-i-Mehriran:before {
+  content: "\e947";
+}
+.VCA-i-tejarat:before {
+  content: "\e97f";
+}
+.VCA-i-Pasargad:before {
+  content: "\e99b";
+}
+.VCA-i-PayamNoor:before {
+  content: "\e99d";
+}
+.VCA-i-SanatMadan:before {
+  content: "\e9c7";
+}
+.VCA-i-Shahr:before {
+  content: "\e9d1";
+}
+.VCA-i-Shaparak:before {
+  content: "\e9d2";
+}
+.VCA-i-Shetab:before {
+  content: "\e9d3";
+}
+.VCA-i-Sina:before {
+  content: "\e9d4";
+}
+.VCA-i-Tosse:before {
+  content: "\ea09";
+}
+.VCA-i-ZarinPal:before {
+  content: "\ea12";
+}
+.VCA-i-Afzal-toos:before {
+  content: "\ea13";
+}

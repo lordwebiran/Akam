@@ -5,8 +5,10 @@ Plugin Name: ارتباط‌‌ با ما
 Plugin URI: https://www.rtl-theme.com/author/viennacompany/products/
 Description: افزونه حرفه‌ای ارتباط‌‌‌ با ما
 Author: شرکت پرتو گستر ویانا
-Version: 1.0.0
+Version: 1.1.0
 Author URI: https://www.rtl-theme.com/author/viennacompany/
+Elementor tested up to: 3.16.0
+Elementor Pro tested up to: 3.16.0
 */
 
 defined("ABSPATH" || exit());
@@ -51,6 +53,7 @@ class VC_akam_Core
         define("VCA_INC", trailingslashit(VCA_PATH . 'inc'));
         define("VCA_admin", trailingslashit(VCA_INC . 'admin'));
         define("VCA_admin_views", trailingslashit(VCA_admin . 'views'));
+        define("VCA_elementor", trailingslashit(VCA_admin . 'elementor'));
         define("VCA_IMG_FRONT", trailingslashit(VCA_ASSETS . 'img'));
         define("VCA_fontawesome", trailingslashit(VCA_ASSETS . 'fontawesome'));
 

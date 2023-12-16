@@ -2,12 +2,8 @@
 
 if (class_exists('CSF')) {
 
-  //
-  // Set a unique slug-like ID
   $prefix = 'VCA-settings';
 
-  //
-  // Create options
   CSF::createOptions($prefix, array(
     'menu_title' => 'تنظیمات',
     'menu_slug'  => 'VCA-settings',
@@ -16,8 +12,6 @@ if (class_exists('CSF')) {
     'menu_hidden' => true,
   ));
 
-  //
-  // Create a section
   CSF::createSection($prefix, array(
     'title'  => 'درخواست تماس',
     'fields' => array(
@@ -98,8 +92,8 @@ if (class_exists('CSF')) {
         'type'    => 'callback',
         'function' => 'my_Callrequest',
       ),
-
     )
+
   ));
   CSF::createSection($prefix, array(
     'title'  => 'باکس آیتم درخواست تماس',
@@ -133,7 +127,7 @@ if (class_exists('CSF')) {
           ),
         ),
         'dependency' => array('VCA-item-status', '==', 'true'),
-         'max'=> 6,
+        'max' => 6,
         'default'   => array(
           array(
             'VCA-item-status-Callreques' => '1',
@@ -216,8 +210,6 @@ if (class_exists('CSF')) {
         'title'      => 'فعال سازی دکمه شناور',
         'default'    => false
       ),
-
-      // A text field with dependency conditions
       array(
         'id'         => 'VCA-Floatbutton-text',
         'type'       => 'text',
@@ -231,6 +223,16 @@ if (class_exists('CSF')) {
         'title'      => 'متن روی دکمه شناور',
         'default' => 'ارتباط با ما',
         'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'         => 'VCA-Floatbutton-btn-set',
+        'type'       => 'button_set',
+        'title'      => 'موقیت دکمه شناور',
+        'options'    => array(
+          'right'  => 'راست',
+          'left' => 'چپ',
+        ),
+        'default'    => 'right'
       ),
       array(
         'id'           => 'VCA-Floatbutton-btn-Image',
@@ -283,7 +285,6 @@ if (class_exists('CSF')) {
         'output_important' => true,
         'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
       ),
-      
       array(
         'id'          => 'VCA-Floatbutton-border-right-color',
         'type'        => 'color',

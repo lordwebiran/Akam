@@ -67,6 +67,7 @@ return array(
     'CSF_Welcome' => $baseDir . '/inc/admin/codestar/views/welcome.php',
     'CSF_Widget' => $baseDir . '/inc/admin/codestar/classes/widget-options.class.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Elementor_Callrequest_Widget' => $baseDir . '/inc/admin/elementor/widgets/Callrequest.php',
     'VCA_Assets' => $baseDir . '/inc/VCA-Assets.php',
     'VCA_DB' => $baseDir . '/inc/VCA-DB.php',
     'VCA_DBDL' => $baseDir . '/inc/VCA-DBDL.php',
@@ -82,4 +83,5 @@ return array(
     'WP_Customize_Control_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
     'WP_Customize_Panel_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
     'WP_Customize_Section_CSF' => $baseDir . '/inc/admin/codestar/functions/customize.php',
+    'elementor_VCA_widget' => $baseDir . '/inc/admin/elementor/oembed.php',
 );

@@ -23,7 +23,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.VCA-Floatbutton {
+.VCA-Floatbutton-right {
     position: fixed;
     display: inline-table;
     bottom: 20px;
@@ -31,10 +31,25 @@
     z-index: 999;
 }
 
-.VCA-floating {
+.VCA-Floatbutton-left {
+    position: fixed;
+    display: inline-table;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.VCA-floating-right {
     display: block;
     position: relative;
     top: 0px;
+}
+
+.VCA-floating-left {
+    display: block;
+    position: inherit;
+    bottom: 75px;
+    left: 20px;
 }
 
 .VCA-titel {
