@@ -1,6 +1,5 @@
 <?php
 defined("ABSPATH" || exit());
-
 require_once VCA_INC . 'admin/VCA-settings.php';
 if (is_admin()) {
     new VCA_Menu();

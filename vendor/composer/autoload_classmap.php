@@ -7,6 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Base_Menu' => $baseDir . '/inc/admin/astract/base-menu.php',
+    'CHT\\admin\\CHT_PRO_Admin_Base' => $baseDir . '/inc/plugins/chaty-pro/admin/class-admin-base.php',
+    'CHT\\admin\\CHT_PRO_Social_Icons' => $baseDir . '/inc/plugins/chaty-pro/admin/class-social-icons.php',
+    'CHT\\frontend\\CHT_PRO_Frontend' => $baseDir . '/inc/plugins/chaty-pro/includes/class-frontend.php',
+    'CHT\\includes\\CHT_PRO_Widget' => $baseDir . '/inc/plugins/chaty-pro/includes/class-cht-icons.php',
     'CSF' => $baseDir . '/inc/admin/codestar/classes/setup.class.php',
     'CSF_Abstract' => $baseDir . '/inc/admin/codestar/classes/abstract.class.php',
     'CSF_Comment_Metabox' => $baseDir . '/inc/admin/codestar/classes/comment-options.class.php',
@@ -66,8 +70,12 @@ return array(
     'CSF_Walker_Nav_Menu_Edit' => $baseDir . '/inc/admin/codestar/functions/walker.php',
     'CSF_Welcome' => $baseDir . '/inc/admin/codestar/views/welcome.php',
     'CSF_Widget' => $baseDir . '/inc/admin/codestar/classes/widget-options.class.php',
+    'Chaty_Pro_Review_Box' => $baseDir . '/inc/plugins/chaty-pro/includes/class-review-box.php',
+    'Chaty_SL_Plugin_Updater' => $baseDir . '/inc/plugins/chaty-pro/includes/EDD_SL_Plugin_Updater.php',
+    'Chaty_license_key_box' => $baseDir . '/inc/plugins/chaty-pro/includes/license-key-box.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Elementor_Callrequest_Widget' => $baseDir . '/inc/admin/elementor/widgets/Callrequest.php',
+    'Functions_plugins' => $baseDir . '/inc/plugins/functions.php',
     'VCA_Assets' => $baseDir . '/inc/VCA-Assets.php',
     'VCA_DB' => $baseDir . '/inc/VCA-DB.php',
     'VCA_DBDL' => $baseDir . '/inc/VCA-DBDL.php',

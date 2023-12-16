@@ -7,16 +7,26 @@ class VCA_Assets
 {
     public function __construct()
     {
-        add_action('wp_enqueue_scripts', [$this, 'VCA_ip']);
-        add_action('admin_enqueue_scripts', [$this, 'VCA_ip']);
-        add_action('wp_enqueue_scripts', [$this, 'fontawesome']);
-        add_action('admin_enqueue_scripts', [$this, 'fontawesome']);
+        $options = get_option('VCA-settings');
+        if (isset($options['fontawesome']) && $options['fontawesome']) {
+            add_action('wp_enqueue_scripts', [$this, 'fontawesome']);
+            add_action('admin_enqueue_scripts', [$this, 'fontawesome']);
+        }
+        if (isset($options['VCA_ip']) && $options['VCA_ip']) {
+            add_action('wp_enqueue_scripts', [$this, 'VCA_ip']);
+            add_action('admin_enqueue_scripts', [$this, 'VCA_ip']);
+        }
         add_action('wp_enqueue_scripts', [$this, 'vc_faicons']);
         add_action('admin_enqueue_scripts', [$this, 'vc_faicons']);
+
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts_and_styles']);
         add_action('admin_enqueue_scripts', [$this, 'admin_assets']);
-        add_action( 'elementor/editor/before_enqueue_styles', array( __CLASS__,'VCA_eVCA') );
-        add_action( 'elementor/editor/after_enqueue_styles',array( __CLASS__, 'VCA_eVCA') );
+
+        add_action('wp_enqueue_scripts', [$this, 'VCA_font']);
+        add_action('admin_enqueue_scripts', [$this, 'VCA_font']);
+
+        add_action('elementor/editor/before_enqueue_styles', array(__CLASS__, 'VCA_eVCA'));
+        add_action('elementor/editor/after_enqueue_styles', array(__CLASS__, 'VCA_eVCA'));
     }
 
     function enqueue_scripts_and_styles()
@@ -40,10 +50,10 @@ class VCA_Assets
         //script
         wp_enqueue_script('jquery');
         wp_enqueue_script('VCA-admin', VCA_ASSETS . 'js/VCA-admin.js', array('jquery'), null, true);
-        wp_localize_script('VCA-admin', 'VC_DATA', [
-            'ajax_url' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('VC_ajax_nonce')
-        ]);
+        //wp_localize_script('VCA-admin', 'VC_DATA', [
+        //    'ajax_url' => admin_url('admin-ajax.php'),
+        //    'nonce' => wp_create_nonce('VC_ajax_nonce')
+        //]);
     }
 
 
@@ -85,5 +95,25 @@ class VCA_Assets
     public static function VCA_eVCA()
     {
         wp_enqueue_style('VCA-faicons', VCA_ASSETS . 'font/eVCA-v1.0/style.css');
+    }
+
+    public static function VCA_font()
+    {
+        $options = get_option('VCA-settings');
+        if (isset($options['VCA-font']) && $options['VCA-font'] == 'Vazir') {
+            if (isset($options['VCA-font-Vazir']) && $options['VCA-font-Vazir'] == 'Vazir-en') {
+                wp_enqueue_style('VCA-Vazir-en', VCA_ASSETS . 'font/Vazir-en.css');
+            } else {
+                wp_enqueue_style('VCA-Vazir-fa', VCA_ASSETS . 'font/Vazir-fa.css');
+            }
+        } elseif (isset($options['VCA-font']) && $options['VCA-font'] == 'Estedad') {
+            wp_enqueue_style('VCA-Estedad-fa', VCA_ASSETS . 'font/Estedad.css');
+        } elseif (isset($options['VCA-font']) && $options['VCA-font'] == 'Mikhak') {
+            if (isset($options['VCA-font-Mikhak']) && $options['VCA-font-Mikhak'] == 'Mikhak-en') {
+                wp_enqueue_style('VCA-Mikhak-en', VCA_ASSETS . 'font/Mikhak-en.css');
+            } else {
+                wp_enqueue_style('VCA-Mikhak-fa', VCA_ASSETS . 'font/Mikhak-fa.css');
+            }
+        }
     }
 }

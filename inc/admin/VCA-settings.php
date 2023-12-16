@@ -11,7 +11,56 @@ if (class_exists('CSF')) {
     'footer_text' => '',
     'menu_hidden' => true,
   ));
-
+  CSF::createSection($prefix, array(
+    'title'  => 'تنظیمات عمومی',
+    'fields' => array(
+      array(
+        'id'        => 'VCA-font',
+        'type'      => 'image_select',
+        'title'     => 'انتخاب فونت',
+        'options'   => array(
+          'Vazir' => VCA_ASSETS.'img/VCA-font/Vazir.png',
+          'Estedad' => VCA_ASSETS.'img/VCA-font/Estedad.png',
+          'Mikhak' => VCA_ASSETS.'img/VCA-font/Mikhak.png',
+        ),
+        'default'   => 'Vazir'
+      ),
+      array(
+        'id'        => 'VCA-font-Vazir',
+        'type'      => 'image_select',
+        'title'     => 'فونت وزیر',
+        'options'   => array(
+          'Vazir-en' => VCA_ASSETS.'img/VCA-font/Vazir_en.png',
+          'Vazir-fa' => VCA_ASSETS.'img/VCA-font/Vazir_fa.png',
+        ),
+        'default'   => 'Vazir-fa',
+        'dependency' => array('VCA-font', '==', 'Vazir')
+      ),
+      array(
+        'id'        => 'VCA-font-Mikhak',
+        'type'      => 'image_select',
+        'title'     => 'فونت میخک',
+        'options'   => array(
+          'Mikhak-en' => VCA_ASSETS.'img/VCA-font/Mikhak-en.png',
+          'Mikhak-fa' => VCA_ASSETS.'img/VCA-font/Mikhak-fa.png',
+        ),
+        'default'   => 'Mikhak-fa',
+        'dependency' => array('VCA-font', '==', 'Mikhak')
+      ),
+      array(
+        'id'    => 'fontawesome',
+        'type'  => 'switcher',
+        'title' => 'فونت fontawesome',
+        'default'    => false
+      ),
+      array(
+        'id'    => 'VCA_ip',
+        'type'  => 'switcher',
+        'title' => 'سیاره ایکون',
+        'default'    => true
+      ),
+    )
+  ));
   CSF::createSection($prefix, array(
     'title'  => 'درخواست تماس',
     'fields' => array(
@@ -20,19 +69,19 @@ if (class_exists('CSF')) {
         'id'    => 'VCA-Callrequest-text-h3',
         'type'  => 'text',
         'title' => 'عنوان',
-        'default' => 'فرم درخواست تماس'
+        'default' => 'از بخش تنظیمات افزونه قابل تغییر می باشد'
       ),
       array(
         'id'    => 'VCA-Callrequest-text-p',
         'type'  => 'textarea',
         'title' => 'زیر توضیحات',
-        'default' => 'خوشحال میشیم که ما با شما تماس بگیریم'
+        'default' => 'در بخش تنظیمات امکان تغییر رنگ و تنظیم متن  و تغییر گردی گوشه ها را دارید تا با قالب خود همگام سازی نمایید.'
       ),
       array(
         'id'    => 'VCA-text-button',
         'type'  => 'text',
         'title' => 'متن دکمه',
-        'default' => 'درخواست تماس'
+        'default' => 'ثبت تماس'
       ),
       array(
         'id'    => 'VCA-status-Default',
@@ -44,12 +93,26 @@ if (class_exists('CSF')) {
         'default'     => '1'
       ),
       array(
+        'id'      => 'opt-slider-3',
+        'type'    => 'slider',
+        'title'   => 'گردی گوشه های درخواست تماس',
+        'min'     => 0,
+        'max'     => 45,
+        'step'    => 1,
+        'unit'    => 'px',
+        'output' => '.VCA-Callrequest',
+        'output_mode' => 'border-radius',
+        'default' => 7,
+        'output_important' => true,
+
+      ),
+      array(
         'id'          => 'VCA-Callrequest-color',
         'type'        => 'color',
         'title'       => 'رنگ پس زمینه درخواست تماس',
         'output'      => '.VCA-Callrequest',
         'output_mode' => 'background-color',
-        'default' => '#d2691e',
+        'default' => '#18bab7',
         'output_important' => true
       ),
       array(
@@ -58,7 +121,7 @@ if (class_exists('CSF')) {
         'title'       => 'رنگ عنوان',
         'output'      => '.VCA-Callrequest .VCA-texth h3',
         'output_mode' => 'color',
-        'default' => '#000',
+        'default' => '#ffffff',
         'output_important' => true
       ),
       array(
@@ -67,7 +130,7 @@ if (class_exists('CSF')) {
         'title'       => 'رنگ زیر عنوان',
         'output'      => '.VCA-Callrequest .VCA-texth p',
         'output_mode' => 'color',
-        'default' => '#000',
+        'default' => '#ffffff',
         'output_important' => true
       ),
       array(
@@ -76,7 +139,7 @@ if (class_exists('CSF')) {
         'title'       => 'رنگ پس زمینه دکمه درخواست تماس',
         'output'      => '.VCA-Callrequest form.Callrequest button',
         'output_mode' => 'background-color',
-        'default' => '#fff',
+        'default' => '#ffffff',
         'output_important' => true
       ),
       array(
@@ -85,7 +148,7 @@ if (class_exists('CSF')) {
         'title'       => 'رنگ متن دکمه درخواست تماس',
         'output'      => '.VCA-Callrequest form.Callrequest button',
         'output_mode' => 'color',
-        'default' => '#000',
+        'default' => '#18bab7',
         'output_important' => true
       ),
       array(
@@ -232,7 +295,35 @@ if (class_exists('CSF')) {
           'right'  => 'راست',
           'left' => 'چپ',
         ),
-        'default'    => 'right'
+        'dependency' => array('VCA-Floatbutton-switcher', '==', 'true')
+      ),
+      array(
+        'id'    => 'opt-spacing-right',
+        'type'  => 'spacing',
+        'title' => 'right',
+        'left'  => false,
+        'top' => false,
+        'output' => '.VCA-Floatbutton-right',
+        'units' => array('px'),
+        'default'     => array(
+          'right'     => '20',
+          'bottom'    => '20',
+        ),
+        'dependency' => array('VCA-Floatbutton-btn-set', '==', 'right')
+      ),
+      array(
+        'id'    => 'opt-spacing-left',
+        'type'  => 'spacing',
+        'title' => 'left',
+        'right' => false,
+        'top' => false,
+        'output' => '.VCA-Floatbutton-left',
+        'units' => array('px'),
+        'default'     => array(
+          'bottom'    => '20',
+          'left'      => '20',
+        ),
+        'dependency' => array('VCA-Floatbutton-btn-set', '==', 'left')
       ),
       array(
         'id'           => 'VCA-Floatbutton-btn-Image',

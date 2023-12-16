@@ -5,7 +5,7 @@ Plugin Name: ارتباط‌‌ با ما
 Plugin URI: https://www.rtl-theme.com/author/viennacompany/products/
 Description: افزونه حرفه‌ای ارتباط‌‌‌ با ما
 Author: شرکت پرتو گستر ویانا
-Version: 1.1.0
+Version: 1.1.1
 Author URI: https://www.rtl-theme.com/author/viennacompany/
 Elementor tested up to: 3.16.0
 Elementor Pro tested up to: 3.16.0

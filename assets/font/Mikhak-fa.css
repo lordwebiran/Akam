@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "VCA-font";
+    src: url("Mikhak/Mikhak-VF-FD.eot");
+    /* IE9 Compat Modes */
+    src: url("Mikhak/Mikhak-VF-FD.eot?#iefix") format("embedded-opentype"),
+        /* Super Modern Browsers */
+        url("Mikhak/Mikhak-VF-FD.woff") format("woff"),
+        /* Pretty Modern Browsers */
+        url("Mikhak/Mikhak-VF-FD.ttf") format("truetype");
+    /* Safari, Android, iOS */
+}
+
+.VCA-font {
+    font-family: "VCA-font" !important;
+}
