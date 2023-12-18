@@ -42,10 +42,6 @@ This plugin requires a minimum PHP version of 7.4.
 - Upon activation, the plugin creates necessary tables using `VCA_DB::create_table()`.
 - Upon deactivation, the plugin creates additional tables using `VCA_DBDL::create_table()`.
 
-## Admin Notice
-
-If your PHP version is below 7.4, an admin notice will be displayed, prompting you to upgrade your PHP version.
-
 ## License
 
 This plugin is released under [MIT License](LICENSE).
